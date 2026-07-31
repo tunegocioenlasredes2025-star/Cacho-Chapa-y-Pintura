@@ -165,5 +165,30 @@ misma carpeta, así que `index.html` queda en la raíz del repo.
 4. Deploy.
 5. Conectar el dominio y hacer el reemplazo del punto 3 de *Pendientes*.
 
-`vercel.json` ya deja configurado el cache largo para imágenes y fuentes y los headers de
-seguridad (`X-Content-Type-Options`, `Referrer-Policy`, etc.).
+`vercel.json` ya deja configurados los headers de seguridad (`X-Content-Type-Options`,
+`Referrer-Policy`, etc.) y el cache de cada tipo de archivo.
+
+### ⚠️ Al editar un `.css` o un `.js`: subir el `?v=`
+
+En `index.html` los estilos y el script se piden con una versión:
+
+```html
+<link rel="stylesheet" href="assets/css/base.css?v=2">
+<link rel="stylesheet" href="assets/css/site.css?v=2">
+<script src="assets/js/site.js?v=2" defer></script>
+```
+
+**Cada vez que se toque un CSS o el JS hay que subir ese número en los tres.** Si no, un
+visitante que ya entró antes puede quedarse con el CSS viejo y el HTML nuevo, y la página se
+rompe (pasó con el equipamiento: el markup nuevo usa `.equip__item` y el CSS viejo tenía
+`.equip__card`, así que la sección quedaba sin estilo).
+
+El `vercel.json` también fuerza `no-cache` en CSS y JS como segunda red de seguridad, pero
+el `?v=` es lo que evita hasta la petición de revalidación.
+
+### Cache de las fotos
+
+Las imágenes **no** están como `immutable` a propósito: el procedimiento de
+`REEMPLAZAR-FOTOS.md` es pisar los archivos con el mismo nombre, y con `immutable` los
+visitantes que ya entraron seguirían viendo las fotos viejas durante un año. Están en una
+hora de frescura con revalidación en segundo plano.

@@ -4,21 +4,24 @@
   "trailingSlash": false,
   "headers": [
     {
+      "comment": "Las fuentes nunca cambian de contenido con el mismo nombre.",
       "source": "/assets/fonts/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
+      "comment": "Las fotos SI se pisan con el mismo nombre (ver REEMPLAZAR-FOTOS.md), asi que no pueden ser immutable: quedarian congeladas un anio. Una hora fresca y despues se sirven mientras se revalidan en segundo plano.",
       "source": "/assets/img/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
       ]
     },
     {
+      "comment": "CSS y JS siempre se revalidan. El HTML y el CSS tienen que viajar juntos: si el navegador se queda con un CSS viejo y un HTML nuevo, la pagina se rompe. El ?v= de index.html es la segunda red de seguridad.",
       "source": "/assets/(css|js)/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, no-cache" }
       ]
     },
     {
