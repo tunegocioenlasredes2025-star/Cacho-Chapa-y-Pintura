@@ -41,7 +41,7 @@
      ========================================================================== -->
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/hero-cabina.webp" as="image" imagesrcset="assets/img/hero-cabina-sm.webp 900w, assets/img/hero-cabina.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="assets/img/hero.webp" as="image" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1800w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/site.css">
 
@@ -116,7 +116,7 @@
     {
       "@type": "Question",
       "name": "¿Trabajan con mi compañía de seguros?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tomamos trabajos derivados por compañías y también siniestros que gestiona directamente el titular. Lo más práctico es escribirnos por WhatsApp con el nombre de la aseguradora y el número de siniestro, si ya lo tenés, y te indicamos cómo seguir." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Tomamos trabajos derivados por compañías y también siniestros que gestiona directamente el titular. Escribinos por WhatsApp con el nombre de la aseguradora y el número de siniestro, si ya lo tenés, y te decimos cómo seguir." }
     },
     {
       "@type": "Question",
@@ -125,23 +125,8 @@
     },
     {
       "@type": "Question",
-      "name": "¿Cuánto tarda una reparación de chapa y pintura?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance del daño y de la disponibilidad de repuestos. Un trabajo sobre uno o dos paños no se compara con una reparación estructural. El plazo estimado lo damos junto con el presupuesto y avisamos si cambia durante el trabajo." }
-    },
-    {
-      "@type": "Question",
       "name": "¿El color va a quedar igual al resto del vehículo?",
       "acceptedAnswer": { "@type": "Answer", "text": "El color se prepara en el laboratorio del taller a partir del código de fábrica del vehículo y se ajusta sobre probeta antes de aplicarlo. En paños contiguos se trabaja con difuminado para que la diferencia no se note." }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo ver cómo avanza el trabajo?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Podés pasar por el taller o pedirnos fotos del avance por WhatsApp cuando quieras." }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hacen trabajos que no sean por siniestro?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sí: restauraciones, pintura completa, pulidos, corrección de pintura y reparaciones integrales para particulares y empresas." }
     },
     {
       "@type": "Question",
@@ -161,10 +146,6 @@
      Set de iconos (SVG sprite, sin dependencias externas)
      ========================================================================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <g id="i-base" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></g>
-  </defs>
-
   <symbol id="ic-wa" viewBox="0 0 24 24">
     <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35Z"/>
     <path fill="currentColor" d="M20.52 3.45A11.86 11.86 0 0 0 12.05 0C5.5 0 .17 5.32.17 11.87c0 2.09.55 4.14 1.59 5.94L.07 24l6.35-1.65a11.83 11.83 0 0 0 5.62 1.43h.01c6.54 0 11.87-5.32 11.87-11.87 0-3.17-1.23-6.15-3.4-8.46ZM12.05 21.79h-.01a9.87 9.87 0 0 1-5.02-1.37l-.36-.21-3.73.97.99-3.63-.24-.37a9.8 9.8 0 0 1-1.51-5.31c0-5.44 4.43-9.87 9.88-9.87 2.64 0 5.12 1.03 6.98 2.9a9.8 9.8 0 0 1 2.89 6.98c0 5.45-4.43 9.88-9.87 9.88Z"/>
@@ -210,8 +191,7 @@
   <!-- Equipamiento -->
   <symbol id="eq-cabina" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 34V9.5A1.5 1.5 0 0 1 5.5 8H34a1.5 1.5 0 0 1 1.5 1.5V34"/>
-    <path d="M2 34h36"/>
-    <path d="M9 28.5h9M9 24h13"/>
+    <path d="M2 34h36"/><path d="M9 28.5h9M9 24h13"/>
     <path d="M24.5 12.5h6.5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-6.5"/>
     <path d="M24.5 11v9l-4.5-2.2v-4.6L24.5 11Z"/>
     <path d="M20 15.3h-4M17.5 19.5 20 17.7M17.5 11.2 20 13"/>
@@ -224,8 +204,7 @@
   </symbol>
 
   <symbol id="eq-laser" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="20" cy="20" r="6"/>
-    <circle cx="20" cy="20" r="1.4"/>
+    <circle cx="20" cy="20" r="6"/><circle cx="20" cy="20" r="1.4"/>
     <path d="M20 4v6M20 30v6M4 20h6M30 20h6"/>
     <path d="M8.6 8.6 13 13M27 27l4.4 4.4M31.4 8.6 27 13M13 27l-4.4 4.4"/>
   </symbol>
@@ -234,8 +213,7 @@
     <path d="M6 21.5h4l2.5-5.5a3 3 0 0 1 2.7-1.7h9.6a3 3 0 0 1 2.7 1.7l2.5 5.5h4"/>
     <path d="M6 21.5v3.5h28v-3.5"/>
     <circle cx="12.5" cy="25" r="2.2"/><circle cx="27.5" cy="25" r="2.2"/>
-    <path d="M3 31h34"/>
-    <path d="M8 31v-3M32 31v-3"/>
+    <path d="M3 31h34"/><path d="M8 31v-3M32 31v-3"/>
     <path d="M20 8.5v4M17 11l3-3 3 3"/>
   </symbol>
 
@@ -268,11 +246,6 @@
   <symbol id="ic-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="12" cy="8.5" r="3.8"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/>
   </symbol>
-
-  <symbol id="ic-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="3.2"/>
-    <path d="M12 2.8v2.6M12 18.6v2.6M4.5 4.5l1.9 1.9M17.6 17.6l1.9 1.9M2.8 12h2.6M18.6 12h2.6M4.5 19.5l1.9-1.9M17.6 6.4l1.9-1.9"/>
-  </symbol>
 </svg>
 
 <!-- ==========================================================================
@@ -291,13 +264,11 @@
     </a>
 
     <nav class="nav" aria-label="Navegación principal">
-      <a href="#nosotros">Nosotros</a>
-      <a href="#equipamiento">Equipamiento</a>
+      <a href="#taller">El taller</a>
       <a href="#servicios">Servicios</a>
-      <a href="#proceso">Cómo trabajamos</a>
       <a href="#seguros">Seguros</a>
       <a href="#trabajos">Trabajos</a>
-      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
     </nav>
 
     <div class="header__actions">
@@ -312,14 +283,11 @@
 <!-- Menú móvil -->
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu__nav" aria-label="Navegación móvil">
-    <a href="#nosotros"><i>01</i> Nosotros</a>
-    <a href="#equipamiento"><i>02</i> Equipamiento</a>
-    <a href="#servicios"><i>03</i> Servicios</a>
-    <a href="#proceso"><i>04</i> Cómo trabajamos</a>
-    <a href="#seguros"><i>05</i> Seguros</a>
-    <a href="#trabajos"><i>06</i> Trabajos</a>
-    <a href="#faq"><i>07</i> Preguntas</a>
-    <a href="#contacto"><i>08</i> Contacto</a>
+    <a href="#taller"><i>01</i> El taller</a>
+    <a href="#servicios"><i>02</i> Servicios</a>
+    <a href="#seguros"><i>03</i> Seguros</a>
+    <a href="#trabajos"><i>04</i> Trabajos</a>
+    <a href="#contacto"><i>05</i> Contacto</a>
   </nav>
   <div class="menu__foot">
     <div class="btn-row">
@@ -343,11 +311,11 @@
      ========================================================================== -->
 <section class="hero" id="inicio">
   <div class="hero__media" id="heroMedia">
-    <img src="assets/img/hero-cabina.webp"
-         srcset="assets/img/hero-cabina-sm.webp 900w, assets/img/hero-cabina.webp 1800w"
+    <img src="assets/img/hero.webp"
+         srcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1800w"
          sizes="100vw"
-         alt="Interior de una cabina de pintura con un vehículo enmascarado listo para pintar"
-         fetchpriority="high" decoding="async">
+         alt="Vehículo enmascarado dentro de la cabina de pintura del Taller Cacho"
+         width="1600" height="720" fetchpriority="high" decoding="async">
   </div>
 
   <div class="hero__inner">
@@ -360,9 +328,8 @@
     <h1 data-reveal style="--reveal-delay:120ms">Tu vehículo vuelve a su <em>estado original</em>.</h1>
 
     <p class="hero__sub" data-reveal style="--reveal-delay:200ms">
-      Reparación de siniestros, chapa y pintura con el equipamiento necesario para resolver
-      todo el proceso dentro del taller. Trabajamos con compañías de seguros, con empresas
-      y con particulares.
+      Chapa, pintura y reparación de siniestros en Castelar. Trabajamos con compañías
+      de seguros, con empresas y con particulares.
     </p>
 
     <div class="btn-row" data-reveal style="--reveal-delay:280ms">
@@ -381,374 +348,116 @@
       <li class="hero__spec"><b>Laboratorio de colores</b><span>Color según código del vehículo</span></li>
     </ul>
   </div>
-
-  <span class="hero__scroll" aria-hidden="true">Deslizá</span>
 </section>
 
 <!-- ==========================================================================
-     BARRA DE CONFIANZA
+     EL TALLER + EQUIPAMIENTO
      ========================================================================== -->
-<section class="trust">
+<section class="section" id="taller">
   <div class="container">
-    <ul class="trust__grid">
-      <li class="trust__item" data-reveal><svg aria-hidden="true"><use href="#ic-check"></use></svg><span>Presupuesto sin cargo</span></li>
-      <li class="trust__item" data-reveal style="--reveal-delay:80ms"><svg aria-hidden="true"><use href="#ic-check"></use></svg><span>Trabajos para compañías de seguros</span></li>
-      <li class="trust__item" data-reveal style="--reveal-delay:160ms"><svg aria-hidden="true"><use href="#ic-check"></use></svg><span>Proceso completo dentro del taller</span></li>
-      <li class="trust__item" data-reveal style="--reveal-delay:240ms"><svg aria-hidden="true"><use href="#ic-check"></use></svg><span>Entrega con control final</span></li>
-    </ul>
-  </div>
-</section>
+    <div class="taller__grid">
 
-<!-- ==========================================================================
-     NOSOTROS
-     ========================================================================== -->
-<section class="section" id="nosotros">
-  <div class="container">
-    <div class="about__grid">
+      <div class="taller__body">
+        <p class="eyebrow" data-reveal>El taller</p>
+        <h2 data-reveal style="--reveal-delay:60ms">Todo el trabajo se resuelve puertas adentro.</h2>
+        <p data-reveal style="--reveal-delay:120ms">
+          Taller Cacho está en Diego Araoz 3339/49, Castelar. Hacemos chapa, pintura y
+          reparación de siniestros para particulares, empresas y compañías de seguros.
+        </p>
+        <p data-reveal style="--reveal-delay:160ms">
+          Estamos equipados para el circuito completo: enderezado sobre bancada,
+          verificación de la estructura con medición láser, pintura en cabina y control
+          de terminación. No tercerizamos etapas.
+        </p>
+      </div>
 
-      <div class="about__media" data-reveal="left">
-        <!-- FOTO PLACEHOLDER — reemplazar por una foto real de la nave del taller -->
-        <div class="reveal-media" data-reveal="fade">
-          <img src="assets/img/taller-nave.webp" alt="Vista general del taller con vehículos en proceso de reparación"
+      <div class="taller__media" data-reveal="right">
+        <!-- FOTO REAL DEL TALLER -->
+        <div class="reveal-media">
+          <img src="assets/img/taller.webp" width="1200" height="675"
+               alt="Sistema de mezcla de pinturas y laboratorio de colores del Taller Cacho"
                loading="lazy" decoding="async">
         </div>
-        <div class="about__badge">
-          <b>Castelar</b>
-          <span>Diego Araoz 3339/49 — Zona oeste del Gran Buenos Aires</span>
-        </div>
-      </div>
-
-      <div class="about__body">
-        <p class="eyebrow" data-reveal>Quiénes somos</p>
-        <h2 data-reveal style="--reveal-delay:60ms">Un taller que resuelve el trabajo completo, de principio a fin.</h2>
-
-        <p data-reveal style="--reveal-delay:120ms">
-          Taller Cacho está en Castelar y trabaja sobre chapa, pintura y reparación de
-          siniestros para particulares, empresas y compañías de seguros.
-        </p>
-
-        <p data-reveal style="--reveal-delay:160ms">
-          El taller está equipado para hacer el circuito completo puertas adentro: desarmado,
-          enderezado sobre bancada, verificación de la estructura con medición láser, preparación
-          de superficie, pintura en cabina y control de terminación. No dependemos de terceros
-          para cerrar un trabajo, y eso nos permite sostener el mismo criterio en cada etapa.
-        </p>
-
-        <p data-reveal style="--reveal-delay:200ms">
-          Tampoco prometemos plazos que no podemos cumplir. Antes de empezar te decimos qué se
-          va a hacer, cómo y en cuánto tiempo. Si durante la reparación aparece algo que cambia
-          ese plazo, te avisamos en el momento.
-        </p>
-
-        <div class="about__points">
-          <div class="about__point" data-reveal>
-            <i>01</i>
-            <div>
-              <b>Diagnóstico antes del presupuesto</b>
-              <span>Revisamos el vehículo y desarmamos lo necesario para detectar los daños que no se ven a simple vista, antes de pasar un número.</span>
-            </div>
-          </div>
-          <div class="about__point" data-reveal style="--reveal-delay:80ms">
-            <i>02</i>
-            <div>
-              <b>Un responsable por vehículo</b>
-              <span>Siempre sabés a quién preguntarle por el estado de tu auto, en cualquier momento del proceso.</span>
-            </div>
-          </div>
-          <div class="about__point" data-reveal style="--reveal-delay:160ms">
-            <i>03</i>
-            <div>
-              <b>Terminación verificada</b>
-              <span>Ningún vehículo se entrega sin control de color bajo luz, ajuste de paños, prueba de sistemas y limpieza final.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ================================================================
-             CONTADORES
-             Los valores marcados con (*) son estimados de la demo:
-             confirmarlos con el cliente antes de publicar.
-             ================================================================ -->
-        <div class="counters" data-reveal>
-          <div class="counter"><b data-count="30" data-prefix="+">+0</b><span>Años de oficio en chapa y pintura <!-- (*) confirmar --></span></div>
-          <div class="counter"><b data-count="6">0</b><span>Sistemas y equipos instalados en el taller</span></div>
-          <div class="counter"><b data-count="100" data-suffix="%">0%</b><span>Del proceso se resuelve en el taller</span></div>
-          <div class="counter"><b data-count="24" data-suffix=" h">0 h</b><span>Para responder un pedido de presupuesto <!-- (*) confirmar --></span></div>
-        </div>
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ==========================================================================
-     EQUIPAMIENTO
-     ========================================================================== -->
-<section class="section section--dark" id="equipamiento">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <p class="eyebrow" data-reveal>Nuestro equipamiento</p>
-      <h2 data-reveal style="--reveal-delay:60ms">Las herramientas que hacen posible el resultado.</h2>
-      <p class="lead" data-reveal style="--reveal-delay:120ms">
-        Un trabajo de carrocería se sostiene en el equipamiento con el que se hace. Esto es lo
-        que tenemos instalado en el taller y para qué sirve cada cosa.
-      </p>
-    </div>
-
-    <div class="equip__grid">
-      <article class="equip__card" data-reveal>
-        <span class="equip__num">01</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-cabina"></use></svg></span>
-        <h3>Cabina de pintura</h3>
-        <p>Aplicación y secado en ambiente cerrado, con temperatura y flujo de aire controlados. Menos partículas sobre la superficie y un curado parejo del color.</p>
-      </article>
-
-      <article class="equip__card" data-reveal style="--reveal-delay:70ms">
-        <span class="equip__num">02</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-diagnostico"></use></svg></span>
-        <h3>Diagnóstico computarizado</h3>
-        <p>Lectura electrónica del vehículo para detectar fallas y verificar que los sistemas queden operativos después de la reparación.</p>
-      </article>
-
-      <article class="equip__card" data-reveal style="--reveal-delay:140ms">
-        <span class="equip__num">03</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-laser"></use></svg></span>
-        <h3>Sistema de medición láser</h3>
-        <p>Comparación punto por punto contra las medidas de fábrica. Permite confirmar que la estructura volvió a su geometría original, no estimarlo.</p>
-      </article>
-
-      <article class="equip__card" data-reveal style="--reveal-delay:210ms">
-        <span class="equip__num">04</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-bancada"></use></svg></span>
-        <h3>Bancada de estiramiento</h3>
-        <p>Anclaje y tracción controlada para devolver chasis y largueros a su posición, trabajando el material sin forzarlo.</p>
-      </article>
-
-      <article class="equip__card" data-reveal>
-        <span class="equip__num">05</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-colores"></use></svg></span>
-        <h3>Laboratorio de colores</h3>
-        <p>El color se prepara en el taller a partir del código del vehículo y se ajusta sobre probeta antes de aplicarlo sobre el paño.</p>
-      </article>
-
-      <article class="equip__card" data-reveal style="--reveal-delay:70ms">
-        <span class="equip__num">06</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-aire"></use></svg></span>
-        <h3>Sistema de aire acondicionado</h3>
-        <p>Carga y control del circuito de climatización, para que el vehículo se entregue funcionando como corresponde y no con un pendiente.</p>
-      </article>
-
-      <article class="equip__card equip__card--feature" data-reveal style="--reveal-delay:140ms">
-        <span class="equip__num">07</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#eq-seguros"></use></svg></span>
-        <h3>Trabajos para compañías de seguros</h3>
-        <p>Todo lo anterior es lo que nos permite tomar siniestros de aseguradoras y respaldar técnicamente cada tarea presupuestada frente a un peritaje.</p>
-        <a class="link-arrow" href="#seguros">Cómo trabajamos con seguros <svg aria-hidden="true"><use href="#ic-arrow"></use></svg></a>
-      </article>
-
-      <article class="equip__card" data-reveal style="--reveal-delay:210ms">
-        <span class="equip__num">08</span>
-        <span class="equip__icon"><svg aria-hidden="true"><use href="#ic-gear"></use></svg></span>
-        <h3>Herramienta de carrocería</h3>
-        <p>Soldadura, sacabollos, tratamiento de superficie y herramienta específica de chapa para reconstruir la pieza en lugar de reemplazarla cuando corresponde.</p>
-      </article>
-    </div>
+    <!-- Equipamiento en formato compacto: nombre + una línea, sin tarjetas grandes -->
+    <ul class="equip">
+      <li class="equip__item" data-reveal>
+        <svg aria-hidden="true"><use href="#eq-cabina"></use></svg>
+        <div><b>Cabina de pintura</b><span>Temperatura y flujo de aire controlados</span></div>
+      </li>
+      <li class="equip__item" data-reveal style="--reveal-delay:50ms">
+        <svg aria-hidden="true"><use href="#eq-bancada"></use></svg>
+        <div><b>Bancada de estiramiento</b><span>Chasis y largueros a su posición original</span></div>
+      </li>
+      <li class="equip__item" data-reveal style="--reveal-delay:100ms">
+        <svg aria-hidden="true"><use href="#eq-laser"></use></svg>
+        <div><b>Sistema de medición láser</b><span>Estructura verificada contra medidas de fábrica</span></div>
+      </li>
+      <li class="equip__item" data-reveal style="--reveal-delay:150ms">
+        <svg aria-hidden="true"><use href="#eq-colores"></use></svg>
+        <div><b>Laboratorio de colores</b><span>Color preparado según el código del vehículo</span></div>
+      </li>
+      <li class="equip__item" data-reveal>
+        <svg aria-hidden="true"><use href="#eq-diagnostico"></use></svg>
+        <div><b>Diagnóstico computarizado</b><span>Control electrónico antes y después de reparar</span></div>
+      </li>
+      <li class="equip__item" data-reveal style="--reveal-delay:50ms">
+        <svg aria-hidden="true"><use href="#eq-aire"></use></svg>
+        <div><b>Sistema de aire acondicionado</b><span>Carga y control del circuito de climatización</span></div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- ==========================================================================
      SERVICIOS
      ========================================================================== -->
-<section class="section section--soft" id="servicios">
+<section class="section section--soft section--tight" id="servicios">
   <div class="container">
-    <div class="section-head section-head--split">
-      <p class="eyebrow" data-reveal>Servicios</p>
-      <h2 data-reveal style="--reveal-delay:60ms">Qué hacemos en el taller.</h2>
-      <p class="lead" data-reveal style="--reveal-delay:120ms">
-        Desde un paño con un roce hasta una reparación estructural completa. Si no estás
-        seguro de qué necesita tu vehículo, mandanos fotos y te lo decimos.
-      </p>
-    </div>
+    <div class="svc__grid">
+      <div class="svc__head">
+        <p class="eyebrow" data-reveal>Servicios</p>
+        <h2 data-reveal style="--reveal-delay:60ms">Qué hacemos.</h2>
+      </div>
 
-    <!-- FOTOS PLACEHOLDER — reemplazar por trabajos reales del taller -->
-    <div class="services__grid">
-
-      <article class="service" data-reveal>
-        <div class="service__media">
-          <img src="assets/img/servicio-chapa.webp" alt="Trabajo de soldadura sobre pieza metálica de carrocería" loading="lazy" decoding="async">
-          <span class="service__tag">01 — Chapa</span>
-        </div>
-        <div class="service__body">
-          <h3>Chapa</h3>
-          <p>Enderezado, reconstrucción de zonas dañadas y reemplazo de paños cuando el daño no admite reparación. Trabajo sobre bancada si el golpe comprometió la estructura.</p>
-          <ul class="service__list"><li>Enderezado</li><li>Soldadura</li><li>Reemplazo de paños</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal style="--reveal-delay:70ms">
-        <div class="service__media">
-          <img src="assets/img/servicio-pintura.webp" alt="Preparación de un vehículo dentro de la cabina de pintura" loading="lazy" decoding="async">
-          <span class="service__tag">02 — Pintura</span>
-        </div>
-        <div class="service__body">
-          <h3>Pintura</h3>
-          <p>Preparación de superficie, fondo, color y barniz aplicados en cabina. El color se prepara en el laboratorio del taller según el código de fábrica del vehículo.</p>
-          <ul class="service__list"><li>Cabina</li><li>Color de fábrica</li><li>Barnizado</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal style="--reveal-delay:140ms">
-        <div class="service__media">
-          <img src="assets/img/servicio-siniestros.webp" alt="Vehículo enmascarado en proceso de reparación por siniestro" loading="lazy" decoding="async">
-          <span class="service__tag">03 — Siniestros</span>
-        </div>
-        <div class="service__body">
-          <h3>Reparación de siniestros</h3>
-          <p>Choques, granizo, vuelcos y daños múltiples. Relevamos el alcance real desarmando el vehículo antes de presupuestar, para que no aparezcan sorpresas a mitad del trabajo.</p>
-          <ul class="service__list"><li>Choques</li><li>Granizo</li><li>Daño estructural</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal>
-        <div class="service__media">
-          <img src="assets/img/servicio-pulido.webp" alt="Pulido de carrocería con pulidora orbital" loading="lazy" decoding="async">
-          <span class="service__tag">04 — Pulidos</span>
-        </div>
-        <div class="service__body">
-          <h3>Pulidos y corrección de pintura</h3>
-          <p>Corrección de micro rayas, marcas de lavado y opacidad del barniz. Devuelve profundidad al color sin necesidad de repintar el paño.</p>
-          <ul class="service__list"><li>Corrección</li><li>Abrillantado</li><li>Micro rayas</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal style="--reveal-delay:70ms">
-        <div class="service__media">
-          <img src="assets/img/servicio-seguros.webp" alt="Revisión y relevamiento del daño sobre un vehículo" loading="lazy" decoding="async">
-          <span class="service__tag">05 — Seguros</span>
-        </div>
-        <div class="service__body">
-          <h3>Trabajos para compañías de seguros</h3>
-          <p>Recepción del siniestro, relevamiento de tareas, coordinación del peritaje y documentación fotográfica del proceso. La compañía recibe respaldo técnico de cada ítem.</p>
-          <ul class="service__list"><li>Peritaje</li><li>Documentación</li><li>Gestión</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal style="--reveal-delay:140ms">
-        <div class="service__media">
-          <img src="assets/img/servicio-restauracion.webp" alt="Carrocería de un vehículo clásico en proceso de restauración" loading="lazy" decoding="async">
-          <span class="service__tag">06 — Restauraciones</span>
-        </div>
-        <div class="service__body">
-          <h3>Restauraciones</h3>
-          <p>Recuperación de vehículos con desgaste, óxido o pintura vencida. Tratamiento de superficie, reconstrucción de partes y pintura completa.</p>
-          <ul class="service__list"><li>Clásicos</li><li>Óxido</li><li>Pintura completa</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal>
-        <div class="service__media">
-          <img src="assets/img/servicio-integral.webp" alt="Vehículo sobre elevador dentro del taller" loading="lazy" decoding="async">
-          <span class="service__tag">07 — Integral</span>
-        </div>
-        <div class="service__body">
-          <h3>Reparaciones integrales</h3>
-          <p>Cuando el golpe afecta más que la carrocería: coordinamos la mecánica asociada, la electricidad y la carga de aire acondicionado para entregar el vehículo terminado.</p>
-          <ul class="service__list"><li>Mecánica asociada</li><li>Electricidad</li><li>Aire acondicionado</li></ul>
-        </div>
-      </article>
-
-      <article class="service" data-reveal style="--reveal-delay:70ms">
-        <div class="service__media">
-          <img src="assets/img/taller-elevadores.webp" alt="Vehículos sobre elevadores en el taller" loading="lazy" decoding="async">
-          <span class="service__tag">08 — Empresas</span>
-        </div>
-        <div class="service__body">
-          <h3>Flotas y empresas</h3>
-          <p>Atención de unidades de trabajo con prioridad de plazo, presupuesto detallado por unidad y seguimiento del estado de cada vehículo en reparación.</p>
-          <ul class="service__list"><li>Flotas</li><li>Remises</li><li>Utilitarios</li></ul>
-        </div>
-      </article>
-
+      <ul class="svc__list">
+        <li class="svc__item" data-reveal>
+          <b>Chapa</b><span>Enderezado y reemplazo de paños.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Pintura</b><span>Fondo, color y barniz en cabina.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Reparación de siniestros</b><span>Choques, granizo y daño estructural.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Trabajos para seguros</b><span>Peritaje, documentación y gestión.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Pulidos</b><span>Corrección de micro rayas y brillo.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Restauraciones</b><span>Unidades con óxido o pintura vencida.</span>
+        </li>
+        <li class="svc__item" data-reveal>
+          <b>Reparaciones integrales</b><span>Mecánica, electricidad y aire acondicionado.</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ==========================================================================
-     CÓMO TRABAJAMOS
-     ========================================================================== -->
-<section class="section" id="proceso">
-  <div class="container">
-    <div class="process__grid">
-
-      <div class="process__aside">
-        <p class="eyebrow" data-reveal>Cómo trabajamos</p>
-        <h2 data-reveal style="--reveal-delay:60ms">El mismo circuito para cada vehículo.</h2>
-        <p class="lead" data-reveal style="--reveal-delay:120ms">
-          Sea un trabajo particular o un siniestro de compañía, la reparación pasa siempre por
-          las mismas cinco etapas. Cada una tiene un control antes de habilitar la siguiente.
-        </p>
-        <div class="btn-row" data-reveal style="--reveal-delay:180ms">
-          <a class="btn" href="#contacto">Pedir presupuesto</a>
-        </div>
-      </div>
-
-      <div class="process__steps">
-        <article class="process__step" data-reveal>
-          <span class="process__num">01</span>
-          <div class="process__content">
-            <h3>Recepción y diagnóstico</h3>
-            <p>Recibimos el vehículo, revisamos el daño visible y desarmamos lo necesario para ver el resto. Buena parte del daño estructural aparece recién en esta etapa, y es lo que después define el trabajo real.</p>
-            <span class="process__meta">Primer contacto</span>
-          </div>
-        </article>
-
-        <article class="process__step" data-reveal>
-          <span class="process__num">02</span>
-          <div class="process__content">
-            <h3>Presupuesto y gestión</h3>
-            <p>Te pasamos el detalle de tareas, repuestos y plazo estimado. Si el trabajo va por seguro, preparamos la documentación del siniestro y coordinamos el peritaje con la compañía.</p>
-            <span class="process__meta">Antes de empezar</span>
-          </div>
-        </article>
-
-        <article class="process__step" data-reveal>
-          <span class="process__num">03</span>
-          <div class="process__content">
-            <h3>Chapa y estructura</h3>
-            <p>Enderezado sobre bancada y verificación con medición láser hasta que los puntos de control coinciden con las medidas de fábrica. Sin esa verificación, un paño puede quedar bien y la estructura no.</p>
-            <span class="process__meta">Estructura</span>
-          </div>
-        </article>
-
-        <article class="process__step" data-reveal>
-          <span class="process__num">04</span>
-          <div class="process__content">
-            <h3>Preparación y pintura</h3>
-            <p>Lijado, tratamiento de superficie, enmascarado y fondo. El color se prepara en el laboratorio según el código del vehículo, se prueba sobre probeta y se aplica en cabina con secado controlado.</p>
-            <span class="process__meta">Terminación</span>
-          </div>
-        </article>
-
-        <article class="process__step" data-reveal>
-          <span class="process__num">05</span>
-          <div class="process__content">
-            <h3>Control final y entrega</h3>
-            <p>Armado, ajuste de paños y luces, control de color bajo luz, prueba de los sistemas electrónicos y limpieza. Recién cuando ese control pasa, te avisamos que el vehículo está listo.</p>
-            <span class="process__meta">Entrega</span>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
-     SEGUROS
+     SEGUROS — la sección que sostiene todo el sitio
      ========================================================================== -->
 <section class="section insurance" id="seguros">
+  <!-- Reusa la foto de portada: acá va en blanco y negro y muy oscurecida,
+       no se reconoce, y evita una descarga extra. -->
   <div class="insurance__bg">
-    <img src="assets/img/seguros-detalle.webp" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    <img src="assets/img/hero.webp" alt="" loading="lazy" decoding="async" aria-hidden="true">
   </div>
   <div class="container">
     <div class="insurance__grid">
@@ -757,50 +466,33 @@
         <p class="eyebrow" data-reveal>Compañías de seguros</p>
         <h2 data-reveal style="--reveal-delay:60ms">Preparados para trabajar con aseguradoras.</h2>
         <p class="insurance__lead" data-reveal style="--reveal-delay:120ms">
-          Un siniestro tiene dos partes: la reparación y el trámite. El taller está equipado
-          para resolver la primera con respaldo técnico, y organizado para que la segunda
-          no la termines manejando vos.
+          Un siniestro tiene dos partes: la reparación y el trámite. Estamos equipados para
+          resolver la primera con respaldo técnico y organizados para que la segunda no la
+          termines manejando vos.
         </p>
-        <p class="insurance__lead" data-reveal style="--reveal-delay:160ms">
-          Atendemos tanto trabajos derivados por la compañía como siniestros que gestiona
-          directamente el titular de la póliza.
-        </p>
-        <div class="btn-row" data-reveal style="--reveal-delay:220ms">
+        <div class="btn-row" data-reveal style="--reveal-delay:180ms">
           <a class="btn btn--wa" href="https://wa.me/5491134502319?text=Hola%2C%20tengo%20un%20siniestro%20para%20consultar.%20La%20compa%C3%B1%C3%ADa%20es%3A%20" target="_blank" rel="noopener">
             <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Consultar por un siniestro
           </a>
-          <a class="btn btn--outline-light" href="#equipamiento">Ver equipamiento</a>
         </div>
       </div>
 
       <ul class="insurance__list">
         <li class="insurance__item" data-reveal="right">
           <svg aria-hidden="true"><use href="#ic-search"></use></svg>
-          <div>
-            <b>Peritaje ordenado</b>
-            <span>Recibimos al perito con el vehículo desarmado, el daño a la vista y el detalle de tareas ya relevado. Menos idas y vueltas, menos demora para el titular.</span>
-          </div>
+          <div><b>Peritaje ordenado</b><span>Recibimos al perito con el vehículo desarmado y las tareas ya relevadas.</span></div>
         </li>
         <li class="insurance__item" data-reveal="right" style="--reveal-delay:80ms">
           <svg aria-hidden="true"><use href="#ic-doc"></use></svg>
-          <div>
-            <b>Documentación del trabajo</b>
-            <span>Registro fotográfico del estado inicial, del proceso y de la entrega, disponible tanto para la compañía como para el titular del vehículo.</span>
-          </div>
+          <div><b>Documentación del trabajo</b><span>Registro fotográfico del antes, del proceso y de la entrega.</span></div>
         </li>
         <li class="insurance__item" data-reveal="right" style="--reveal-delay:160ms">
           <svg aria-hidden="true"><use href="#eq-laser"></use></svg>
-          <div>
-            <b>Reparación con criterio técnico</b>
-            <span>Bancada, medición láser y diagnóstico electrónico para justificar cada tarea presupuestada y demostrar que la estructura volvió a su medida original.</span>
-          </div>
+          <div><b>Respaldo técnico</b><span>Bancada, medición láser y diagnóstico detrás de cada ítem presupuestado.</span></div>
         </li>
         <li class="insurance__item" data-reveal="right" style="--reveal-delay:240ms">
           <svg aria-hidden="true"><use href="#ic-user"></use></svg>
-          <div>
-            <b>Un solo interlocutor</b>
-            <span>Una persona sigue el expediente de punta a punta. La compañía y el cliente hablan siempre con la misma referencia.</span>
-          </div>
+          <div><b>Un solo interlocutor</b><span>Una persona sigue el expediente de punta a punta.</span></div>
         </li>
       </ul>
 
@@ -809,151 +501,62 @@
 </section>
 
 <!-- ==========================================================================
-     TRABAJOS REALIZADOS
+     EL TALLER POR DENTRO
      ==========================================================================
-     IMPORTANTE — GALERÍA CON IMÁGENES PROVISORIAS
-     Las 8 fotos de esta sección son de referencia (banco de imágenes libre) y
-     están ahí sólo para que la demo se vea terminada.
-     Para reemplazarlas: pisar los archivos de /assets/img/trabajos/ manteniendo
-     los mismos nombres (trabajo-01.webp / trabajo-01-full.webp, etc.) y
-     actualizar el alt y el data-cap de cada <a>. No hay que tocar nada más.
+     Las 4 fotos son reales y muestran instalaciones y proceso (cabina de
+     pintura y laboratorio de colores), no vehículos terminados. Por eso el
+     título habla del taller y no de "trabajos realizados".
+     Cuando el cliente mande fotos de unidades entregadas, se pueden sumar
+     bloques <a class="gallery__item"> con el par trabajo-0X + trabajo-0X-full.
      ========================================================================== -->
-<section class="section section--soft" id="trabajos">
+<section class="section section--soft section--tight" id="trabajos">
   <div class="container">
     <div class="section-head section-head--split">
-      <p class="eyebrow" data-reveal>Trabajos realizados</p>
-      <h2 data-reveal style="--reveal-delay:60ms">El trabajo se ve en la terminación.</h2>
-      <p class="lead" data-reveal style="--reveal-delay:120ms">
-        Reparaciones de chapa, pintura completa, restauraciones y corrección de terminación.
-        Tocá cualquier imagen para verla en grande.
-      </p>
+      <p class="eyebrow" data-reveal>El taller por dentro</p>
+      <h2 data-reveal style="--reveal-delay:60ms">Cabina de pintura y laboratorio de colores.</h2>
     </div>
 
     <div class="gallery__grid" id="gallery">
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-01-full.webp" data-cap="Corrección de pintura" data-reveal="scale">
-        <img src="assets/img/trabajos/trabajo-01.webp" width="800" height="600" alt="Corrección de pintura sobre el capó de un vehículo" loading="lazy" decoding="async">
-        <span class="gallery__cap">Corrección de pintura</span>
+      <a class="gallery__item" href="assets/img/trabajos/trabajo-01-full.webp" data-cap="Vehículo enmascarado en cabina" data-reveal="scale">
+        <img src="assets/img/trabajos/trabajo-01.webp" width="800" height="450" alt="Vehículo enmascarado dentro de la cabina de pintura del taller" loading="lazy" decoding="async">
+        <span class="gallery__cap">Vehículo enmascarado en cabina</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-02-full.webp" data-cap="Pulido y abrillantado" data-reveal="scale" style="--reveal-delay:60ms">
-        <img src="assets/img/trabajos/trabajo-02.webp" width="800" height="600" alt="Pulido de un lateral con pulidora orbital" loading="lazy" decoding="async">
-        <span class="gallery__cap">Pulido y abrillantado</span>
+      <a class="gallery__item" href="assets/img/trabajos/trabajo-02-full.webp" data-cap="Preparación previa al pintado" data-reveal="scale" style="--reveal-delay:60ms">
+        <img src="assets/img/trabajos/trabajo-02.webp" width="800" height="450" alt="Vehículo preparado y enmascarado antes de aplicar el color" loading="lazy" decoding="async">
+        <span class="gallery__cap">Preparación previa al pintado</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-03-full.webp" data-cap="Restauración de carrocería" data-reveal="scale" style="--reveal-delay:120ms">
-        <img src="assets/img/trabajos/trabajo-03.webp" width="800" height="600" alt="Carrocería desarmada de un vehículo clásico en restauración" loading="lazy" decoding="async">
-        <span class="gallery__cap">Restauración de carrocería</span>
+      <a class="gallery__item" href="assets/img/trabajos/trabajo-03-full.webp" data-cap="Laboratorio de colores" data-reveal="scale" style="--reveal-delay:120ms">
+        <img src="assets/img/trabajos/trabajo-03.webp" width="800" height="450" alt="Laboratorio de colores del taller con el sistema de mezcla de pinturas" loading="lazy" decoding="async">
+        <span class="gallery__cap">Laboratorio de colores</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-04-full.webp" data-cap="Unidad clásica terminada" data-reveal="scale" style="--reveal-delay:180ms">
-        <img src="assets/img/trabajos/trabajo-04.webp" width="800" height="600" alt="Vehículo clásico terminado dentro del taller" loading="lazy" decoding="async">
-        <span class="gallery__cap">Unidad clásica terminada</span>
+      <a class="gallery__item" href="assets/img/trabajos/trabajo-04-full.webp" data-cap="Carta de colores" data-reveal="scale" style="--reveal-delay:180ms">
+        <img src="assets/img/trabajos/trabajo-04.webp" width="800" height="450" alt="Carta de colores y muestrarios para igualar el color de fábrica" loading="lazy" decoding="async">
+        <span class="gallery__cap">Carta de colores</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-05-full.webp" data-cap="Control de terminación" data-reveal="scale">
-        <img src="assets/img/trabajos/trabajo-05.webp" width="800" height="600" alt="Control de terminación sobre la carrocería de un vehículo" loading="lazy" decoding="async">
-        <span class="gallery__cap">Control de terminación</span>
-      </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-06-full.webp" data-cap="Enmascarado previo a cabina" data-reveal="scale" style="--reveal-delay:60ms">
-        <img src="assets/img/trabajos/trabajo-06.webp" width="800" height="600" alt="Vehículo enmascarado antes de entrar a la cabina de pintura" loading="lazy" decoding="async">
-        <span class="gallery__cap">Enmascarado previo a cabina</span>
-      </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-07-full.webp" data-cap="Preparación de superficie" data-reveal="scale" style="--reveal-delay:120ms">
-        <img src="assets/img/trabajos/trabajo-07.webp" width="800" height="600" alt="Preparación y lijado de superficie antes de pintar" loading="lazy" decoding="async">
-        <span class="gallery__cap">Preparación de superficie</span>
-      </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-08-full.webp" data-cap="Instalaciones del taller" data-reveal="scale" style="--reveal-delay:180ms">
-        <img src="assets/img/trabajos/trabajo-08.webp" width="800" height="600" alt="Interior del taller con vehículos en reparación" loading="lazy" decoding="async">
-        <span class="gallery__cap">Instalaciones del taller</span>
-      </a>
-    </div>
-
-    <p class="gallery__note" data-reveal>
-      ¿Querés ver un trabajo parecido al de tu vehículo?
-      <a class="link-arrow" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20ver%20trabajos%20parecidos%20al%20de%20mi%20veh%C3%ADculo." target="_blank" rel="noopener">Pedinos fotos por WhatsApp <svg aria-hidden="true"><use href="#ic-arrow"></use></svg></a>
-    </p>
-  </div>
-</section>
-
-<!-- ==========================================================================
-     POR QUÉ ELEGIRNOS
-     ========================================================================== -->
-<section class="section" id="porque">
-  <div class="container">
-    <div class="section-head section-head--split">
-      <p class="eyebrow" data-reveal>Por qué elegirnos</p>
-      <h2 data-reveal style="--reveal-delay:60ms">Seis razones concretas.</h2>
-      <p class="lead" data-reveal style="--reveal-delay:120ms">
-        No son promesas. Son decisiones de cómo está armado el taller y de cómo trabajamos
-        todos los días.
-      </p>
-    </div>
-
-    <div class="why__grid">
-      <article class="why__card" data-reveal>
-        <i>01</i>
-        <h3>El trabajo no sale del taller</h3>
-        <p>Chapa, pintura y terminación se hacen acá. No tercerizamos etapas ni movemos el vehículo entre talleres, que es donde se pierden los plazos y la responsabilidad.</p>
-      </article>
-      <article class="why__card" data-reveal style="--reveal-delay:70ms">
-        <i>02</i>
-        <h3>Presupuesto con detalle</h3>
-        <p>Vas a saber qué se repara, qué se reemplaza y por qué. Sin ítems genéricos ni conceptos que no se puedan explicar.</p>
-      </article>
-      <article class="why__card" data-reveal style="--reveal-delay:140ms">
-        <i>03</i>
-        <h3>Color que cierra con el resto</h3>
-        <p>El color se prepara según el código del vehículo y se prueba sobre probeta antes de aplicarlo. En paños contiguos se trabaja con difuminado para que el cambio no se note.</p>
-      </article>
-      <article class="why__card" data-reveal>
-        <i>04</i>
-        <h3>Estructura verificada, no estimada</h3>
-        <p>Cuando hay daño estructural, la geometría se controla con medición láser contra las medidas originales. Es la diferencia entre que se vea bien y que esté bien.</p>
-      </article>
-      <article class="why__card" data-reveal style="--reveal-delay:70ms">
-        <i>05</i>
-        <h3>Plazos que se avisan</h3>
-        <p>Si aparece un daño oculto o se demora un repuesto, te lo decimos cuando pasa. No cuando venís a buscar el auto.</p>
-      </article>
-      <article class="why__card" data-reveal style="--reveal-delay:140ms">
-        <i>06</i>
-        <h3>Experiencia con aseguradoras</h3>
-        <p>Conocemos el circuito de peritaje y la documentación que pide cada compañía. Eso acorta el tiempo entre la denuncia y el inicio de la reparación.</p>
-      </article>
     </div>
   </div>
 </section>
 
 <!-- ==========================================================================
-     FAQ
+     PREGUNTAS FRECUENTES (acordeón compacto, cerrado por defecto)
      ========================================================================== -->
-<section class="section section--soft" id="faq">
+<section class="section section--tight" id="faq">
   <div class="container">
     <div class="faq__grid">
-
       <div class="faq__aside">
         <p class="eyebrow" data-reveal>Preguntas frecuentes</p>
         <h2 data-reveal style="--reveal-delay:60ms">Lo que más nos preguntan.</h2>
-        <p class="lead" data-reveal style="--reveal-delay:120ms">
-          Si tu caso no está acá, escribinos y te respondemos.
-        </p>
-        <div class="btn-row" data-reveal style="--reveal-delay:180ms">
-          <a class="btn btn--ghost" href="https://wa.me/5491134502319?text=Hola%2C%20tengo%20una%20consulta%20sobre%20el%20taller." target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Hacer una consulta
-          </a>
-        </div>
       </div>
 
       <div class="faq__list" id="faqList">
         <div class="faq__item" data-reveal>
           <h3><button class="faq__q" type="button" aria-expanded="false">¿Trabajan con mi compañía de seguros?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>Tomamos trabajos derivados por compañías y también siniestros que gestiona directamente el titular. Lo más práctico es escribirnos por WhatsApp con el nombre de la aseguradora y el número de siniestro, si ya lo tenés, y te decimos cómo seguir en tu caso.</p></div></div>
+          <div class="faq__a"><div><p>Tomamos trabajos derivados por compañías y también siniestros que gestiona directamente el titular. Escribinos por WhatsApp con el nombre de la aseguradora y el número de siniestro, si ya lo tenés, y te decimos cómo seguir en tu caso.</p></div></div>
         </div>
 
         <div class="faq__item" data-reveal>
           <h3><button class="faq__q" type="button" aria-expanded="false">¿El presupuesto tiene costo?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>No. Podés acercar el vehículo al taller o mandarnos fotos por WhatsApp para una estimación inicial. El presupuesto cerrado lo damos después de revisar el vehículo, porque hay daños que recién se ven al desarmar y preferimos no pasar un número que después cambie.</p></div></div>
-        </div>
-
-        <div class="faq__item" data-reveal>
-          <h3><button class="faq__q" type="button" aria-expanded="false">¿Cuánto tarda una reparación?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>Depende del alcance del daño y de la disponibilidad de repuestos. Un trabajo de chapa y pintura sobre uno o dos paños no se compara con una reparación estructural.</p><p>El plazo estimado te lo damos junto con el presupuesto, y si durante el trabajo algo lo modifica te avisamos en el momento.</p></div></div>
+          <div class="faq__a"><div><p>No. Podés acercar el vehículo al taller o mandarnos fotos por WhatsApp para una estimación inicial. El presupuesto cerrado lo damos después de revisar el vehículo, porque hay daños que recién se ven al desarmar.</p></div></div>
         </div>
 
         <div class="faq__item" data-reveal>
@@ -962,21 +565,10 @@
         </div>
 
         <div class="faq__item" data-reveal>
-          <h3><button class="faq__q" type="button" aria-expanded="false">¿Puedo ver cómo avanza el trabajo?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>Sí. Podés pasar por el taller cuando quieras o pedirnos fotos del avance por WhatsApp. En trabajos por seguro también dejamos registro fotográfico de cada etapa.</p></div></div>
-        </div>
-
-        <div class="faq__item" data-reveal>
-          <h3><button class="faq__q" type="button" aria-expanded="false">¿Hacen trabajos que no sean por siniestro?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>Sí: restauraciones, pintura completa, pulidos, corrección de pintura y reparaciones integrales, tanto para particulares como para empresas con vehículos de trabajo.</p></div></div>
-        </div>
-
-        <div class="faq__item" data-reveal>
-          <h3><button class="faq__q" type="button" aria-expanded="false">¿Dónde está el taller y cómo llego?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-          <div class="faq__a"><div><p>En Diego Araoz 3339/49, Castelar, partido de Morón, provincia de Buenos Aires. Al final de la página tenés el mapa y el botón para abrir la ubicación directamente en Google Maps.</p></div></div>
+          <h3><button class="faq__q" type="button" aria-expanded="false">¿Dónde está el taller?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>En Diego Araoz 3339/49, Castelar, partido de Morón, provincia de Buenos Aires. Abajo tenés el mapa y el botón para abrir la ubicación directamente en Google Maps.</p></div></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -984,121 +576,35 @@
 <!-- ==========================================================================
      CONTACTO
      ========================================================================== -->
-<section class="section" id="contacto">
+<section class="section section--soft section--tight" id="contacto">
   <div class="container">
-    <div class="contact__grid">
+    <div class="section-head section-head--split">
+      <p class="eyebrow" data-reveal>Contacto</p>
+      <h2 data-reveal style="--reveal-delay:60ms">Hablemos de tu vehículo.</h2>
+      <p class="lead" data-reveal style="--reveal-delay:120ms">
+        Escribinos por WhatsApp con una foto del daño y te decimos cómo seguimos.
+        Si es un siniestro, sumá el nombre de la compañía.
+      </p>
+    </div>
 
-      <div class="contact__info">
-        <div>
-          <p class="eyebrow" data-reveal>Contacto</p>
-          <h2 data-reveal style="--reveal-delay:60ms">Hablemos de tu vehículo.</h2>
-          <p class="lead" data-reveal style="--reveal-delay:120ms">
-            Contanos qué le pasó al auto y te decimos cómo seguimos. Si es un siniestro,
-            sumá el nombre de la compañía y te orientamos con el trámite.
-          </p>
-        </div>
-
-        <div class="contact__data" data-reveal>
-          <a class="contact__row" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20una%20reparaci%C3%B3n%20en%20el%20taller." target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#ic-wa"></use></svg>
-            <div>
-              <b>WhatsApp</b>
-              <span>11 3450-2319</span>
-              <small>La vía más rápida. Podés mandar fotos del daño.</small>
-            </div>
-          </a>
-          <a class="contact__row" href="tel:+541146239498">
-            <svg aria-hidden="true"><use href="#ic-phone"></use></svg>
-            <div>
-              <b>Teléfono / Fax</b>
-              <span>4623-9498</span>
-              <small>Tocá para llamar desde el celular.</small>
-            </div>
-          </a>
-          <a class="contact__row" href="https://www.google.com/maps/search/?api=1&amp;query=Diego%20Araoz%203339%2C%20Castelar%2C%20Buenos%20Aires" target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#ic-pin"></use></svg>
-            <div>
-              <b>Dirección</b>
-              <span>Diego Araoz 3339/49</span>
-              <small>Castelar, partido de Morón, Buenos Aires.</small>
-            </div>
-          </a>
-          <!-- HORARIOS: valores de demo, confirmar con el cliente -->
-          <div class="contact__row">
-            <svg aria-hidden="true"><use href="#ic-clock"></use></svg>
-            <div>
-              <b>Horarios</b>
-              <span>Lunes a viernes de 8 a 18 h</span>
-              <small>Sábados de 9 a 13 h.</small>
-            </div>
-          </div>
-        </div>
+    <div class="contact__data" data-reveal>
+      <a class="contact__row" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20una%20reparaci%C3%B3n%20en%20el%20taller." target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#ic-wa"></use></svg>
+        <div><b>WhatsApp</b><span>11 3450-2319</span><small>La vía más rápida. Podés mandar fotos del daño.</small></div>
+      </a>
+      <a class="contact__row" href="tel:+541146239498">
+        <svg aria-hidden="true"><use href="#ic-phone"></use></svg>
+        <div><b>Teléfono / Fax</b><span>4623-9498</span><small>Tocá para llamar desde el celular.</small></div>
+      </a>
+      <a class="contact__row" href="https://www.google.com/maps/search/?api=1&amp;query=Diego%20Araoz%203339%2C%20Castelar%2C%20Buenos%20Aires" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#ic-pin"></use></svg>
+        <div><b>Dirección</b><span>Diego Araoz 3339/49</span><small>Castelar, partido de Morón, Buenos Aires.</small></div>
+      </a>
+      <!-- HORARIOS: valores de demo, confirmar con el cliente -->
+      <div class="contact__row">
+        <svg aria-hidden="true"><use href="#ic-clock"></use></svg>
+        <div><b>Horarios</b><span>Lunes a viernes de 8 a 18 h</span><small>Sábados de 9 a 13 h.</small></div>
       </div>
-
-      <!-- ====================================================================
-           FORMULARIO
-           Sin backend: arma el mensaje y lo abre en WhatsApp, que es el canal
-           que el taller ya usa. Para pasarlo a envío por mail, ver README.
-           ==================================================================== -->
-      <form class="form" id="contactForm" novalidate data-reveal="right">
-        <div class="form__head">
-          <h3>Pedir un presupuesto</h3>
-          <p>Completá los datos y se abre WhatsApp con el mensaje listo para enviar.</p>
-        </div>
-
-        <div class="form__two">
-          <div class="field">
-            <label for="f-nombre">Nombre y apellido</label>
-            <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
-            <span class="field__error">Escribí tu nombre.</span>
-          </div>
-          <div class="field">
-            <label for="f-tel">Teléfono</label>
-            <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="11 0000-0000" required>
-            <span class="field__error">Escribí un teléfono de contacto.</span>
-          </div>
-        </div>
-
-        <div class="form__two">
-          <div class="field">
-            <label for="f-vehiculo">Vehículo</label>
-            <input id="f-vehiculo" name="vehiculo" type="text" placeholder="Marca, modelo y año">
-            <span class="field__error"></span>
-          </div>
-          <div class="field">
-            <label for="f-tipo">Tipo de consulta</label>
-            <select id="f-tipo" name="tipo">
-              <option>Presupuesto de chapa y pintura</option>
-              <option>Siniestro con compañía de seguros</option>
-              <option>Restauración</option>
-              <option>Pulido y corrección de pintura</option>
-              <option>Reparación integral</option>
-              <option>Otra consulta</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="f-mensaje">Contanos qué pasó</label>
-          <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Descripción del daño, si hay compañía de seguros involucrada, etc." required></textarea>
-          <span class="field__error">Contanos brevemente qué necesitás.</span>
-        </div>
-
-        <button class="btn btn--wa btn--block" type="submit">
-          <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Enviar por WhatsApp
-        </button>
-
-        <div class="form__ok" id="formOk" role="status">
-          <svg aria-hidden="true"><use href="#ic-check"></use></svg>
-          <span>Listo. Se abrió WhatsApp con tu mensaje. Si no se abrió, escribinos al <a href="https://wa.me/5491134502319" target="_blank" rel="noopener">11 3450-2319</a>.</span>
-        </div>
-
-        <p class="form__legal">
-          Usamos tus datos únicamente para responder esta consulta. También podés escribirnos
-          directo por WhatsApp o llamarnos al taller.
-        </p>
-      </form>
-
     </div>
   </div>
 </section>
@@ -1118,7 +624,7 @@
   <div class="map__card">
     <p class="eyebrow">Dónde estamos</p>
     <b>Diego Araoz 3339/49<br>Castelar</b>
-    <p>Partido de Morón, provincia de Buenos Aires. Atendemos toda la zona oeste del Gran Buenos Aires.</p>
+    <p>Partido de Morón, provincia de Buenos Aires. Atendemos toda la zona oeste.</p>
     <a class="btn btn--light" href="https://www.google.com/maps/search/?api=1&amp;query=Diego%20Araoz%203339%2C%20Castelar%2C%20Buenos%20Aires" target="_blank" rel="noopener">
       <svg aria-hidden="true"><use href="#ic-pin"></use></svg> Abrir en Google Maps
     </a>
@@ -1136,36 +642,7 @@
 
       <div class="footer__brand">
         <img src="assets/brand/logo-cacho-blanco.png" alt="Taller Cacho" width="520" height="198" loading="lazy">
-        <p>Taller de chapa y pintura en Castelar. Reparación de siniestros, pintura en cabina y trabajos para compañías de seguros.</p>
-        <div class="btn-row">
-          <a class="btn btn--wa btn--sm" href="https://wa.me/5491134502319" target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="#servicios">Chapa</a></li>
-          <li><a href="#servicios">Pintura</a></li>
-          <li><a href="#servicios">Reparación de siniestros</a></li>
-          <li><a href="#servicios">Pulidos</a></li>
-          <li><a href="#servicios">Restauraciones</a></li>
-          <li><a href="#servicios">Reparaciones integrales</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>El taller</h4>
-        <ul>
-          <li><a href="#nosotros">Quiénes somos</a></li>
-          <li><a href="#equipamiento">Equipamiento</a></li>
-          <li><a href="#proceso">Cómo trabajamos</a></li>
-          <li><a href="#seguros">Compañías de seguros</a></li>
-          <li><a href="#trabajos">Trabajos realizados</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ul>
+        <p>Taller de chapa y pintura en Castelar. Reparación de siniestros y trabajos para compañías de seguros.</p>
       </div>
 
       <div>
@@ -1175,8 +652,7 @@
           Castelar, Buenos Aires<br><br>
           <a href="https://wa.me/5491134502319" target="_blank" rel="noopener">WhatsApp 11 3450-2319</a><br>
           <a href="tel:+541146239498">Tel/Fax 4623-9498</a><br><br>
-          Lun a Vie 8 a 18 h<br>
-          Sáb 9 a 13 h
+          Lun a Vie 8 a 18 h · Sáb 9 a 13 h
         </address>
       </div>
 

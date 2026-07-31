@@ -320,64 +320,7 @@
   });
 
   /* ------------------------------------------------------------------------
-     8. Formulario → WhatsApp
-     ------------------------------------------------------------------------
-     Sin backend: arma el mensaje y abre wa.me. Para enviarlo por mail,
-     ver las instrucciones en README.md.
-     ------------------------------------------------------------------------ */
-  var WA_NUMBER = '5491134502319';
-  var form = $('#contactForm');
-
-  if (form) {
-    var setError = function (input, on) {
-      var field = input.closest('.field');
-      if (field) field.classList.toggle('field--error', on);
-    };
-
-    $$('input, textarea, select', form).forEach(function (input) {
-      input.addEventListener('input', function () { setError(input, false); });
-    });
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var required = $$('[required]', form);
-      var firstInvalid = null;
-
-      required.forEach(function (input) {
-        var invalid = !input.value.trim();
-        setError(input, invalid);
-        if (invalid && !firstInvalid) firstInvalid = input;
-      });
-
-      if (firstInvalid) { firstInvalid.focus(); return; }
-
-      var data = new FormData(form);
-      var lines = [
-        'Hola, quería pedir un presupuesto.',
-        '',
-        'Nombre: ' + (data.get('nombre') || '').trim(),
-        'Teléfono: ' + (data.get('telefono') || '').trim()
-      ];
-
-      var vehiculo = (data.get('vehiculo') || '').trim();
-      if (vehiculo) lines.push('Vehículo: ' + vehiculo);
-
-      lines.push('Consulta: ' + (data.get('tipo') || '').trim());
-      lines.push('');
-      lines.push((data.get('mensaje') || '').trim());
-
-      var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
-
-      var ok = $('#formOk');
-      if (ok) ok.classList.add('is-visible');
-      form.reset();
-    });
-  }
-
-  /* ------------------------------------------------------------------------
-     9. Varios
+     8. Varios
      ------------------------------------------------------------------------ */
   if (toTop) {
     toTop.addEventListener('click', function () {

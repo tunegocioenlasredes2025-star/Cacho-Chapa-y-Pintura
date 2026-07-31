@@ -3,8 +3,9 @@
 Sitio institucional del taller de chapa y pintura **Taller Cacho** (Diego Araoz 3339/49, Castelar).
 
 Objetivo: presentar el taller frente a **compañías de seguros**, empresas y particulares.
-No es un e-commerce ni una landing de captación masiva: es una presencia digital que tiene
-que transmitir trayectoria, equipamiento y método de trabajo.
+No es un e-commerce ni una landing de captación masiva. El pedido del dueño fue explícito:
+*"que se sepa que existo y que para las compañías de seguro alcance y sobre"*. Por eso el
+sitio es **corto a propósito** — 7 bloques, sin secciones de relleno.
 
 ---
 
@@ -33,12 +34,16 @@ sitio/
     │   └── site.css        Componentes y secciones
     ├── fonts/              Archivo + Instrument Sans (woff2, self-hosted)
     ├── js/
-    │   └── site.js         Header, menú, reveals, contadores, FAQ, galería, form
+    │   └── site.js         Header, menú, reveals, FAQ, galería, flotantes
     └── img/
-        ├── hero-cabina.webp / hero-cabina-sm.webp
-        ├── taller-*.webp, servicio-*.webp, seguros-*.webp, equipo-*.webp
-        └── trabajos/       Galería (thumb 800×600 + versión -full para el lightbox)
+        ├── hero.webp / hero-sm.webp   Portada (1800 px / 900 px)
+        ├── taller.webp                Bloque "El taller"
+        ├── seguros.webp               Fondo de la banda de seguros (va en B/N y oscurecida)
+        └── trabajos/                  Galería: 4 fotos, thumb 800×600 + versión -full
 ```
+
+**Los 7 bloques:** portada · el taller + equipamiento · servicios · compañías de seguros ·
+trabajos realizados · preguntas frecuentes · contacto + mapa.
 
 ---
 
@@ -66,18 +71,17 @@ haya salto de layout mientras cargan.
 
 ## ⚠️ Pendientes antes de publicar
 
-### 1. Fotos reales del taller
-**Todas las imágenes de `assets/img/` son provisorias** (banco de imágenes libre, sin
-branding de terceros). Están sólo para que la demo se vea terminada.
-Ver `REEMPLAZAR-FOTOS.md` para el procedimiento exacto.
+### 1. Fotos
+Las 5 fotos del sitio son **reales, del taller** (cabina de pintura y laboratorio de
+colores). No hay ninguna de un vehículo terminado, por eso la sección se llama
+"El taller por dentro" y no "Trabajos realizados". Cuando el cliente mande fotos de
+unidades entregadas conviene sumarlas: es lo que más convence a un particular.
+Ver `REEMPLAZAR-FOTOS.md` para el procedimiento.
 
 ### 2. Datos a confirmar con el cliente
-Están marcados con comentarios en el HTML:
 
 | Dato | Valor actual | Dónde |
 |---|---|---|
-| Años de experiencia | `+30` | Contadores, sección Nosotros |
-| Plazo de respuesta | `24 h` | Contadores, sección Nosotros |
 | Horarios de atención | Lun–Vie 8–18 h · Sáb 9–13 h | Contacto, footer y `schema.org` |
 
 Si cambian los horarios hay que actualizarlos en **tres lugares**: el bloque
@@ -95,22 +99,16 @@ y del botón "Abrir en Google Maps" por el link corto del lugar en Maps.
 
 ---
 
-## Formulario de contacto
+## Contacto
 
-No hay backend: el formulario **arma el mensaje y abre WhatsApp** con el texto listo.
-Es lo que mejor funciona para este tipo de negocio y no requiere servidor ni mail.
+**No hay formulario a propósito.** Un formulario suma alto de página y un paso más, y el
+taller atiende por WhatsApp igual. Los contactos son: el botón flotante de WhatsApp (siempre
+visible), los botones del hero y de la banda de seguros, las cuatro tarjetas de la sección
+Contacto y el `tel:` para llamar desde el celular.
 
-El número está en una sola constante, arriba del bloque en `assets/js/site.js`:
-
-```js
-var WA_NUMBER = '5491134502319';
-```
-
-**Si más adelante se quiere recibir por mail**, la forma más rápida es Formspree:
-1. Crear el form en formspree.io y copiar el endpoint.
-2. En `index.html`, agregarle al `<form>`: `action="https://formspree.io/f/XXXX" method="POST"`.
-3. En `site.js`, en el handler del `submit`, borrar el `e.preventDefault()` y el bloque
-   que arma la URL de wa.me. La validación de campos se mantiene igual.
+El número aparece como `wa.me/5491134502319` en `index.html`. Si cambia, buscar y reemplazar
+esa cadena (aparece en el header móvil, el hero, seguros, contacto, footer y el botón flotante)
+y también `+541146239498` para el teléfono fijo.
 
 ---
 
@@ -121,8 +119,10 @@ var WA_NUMBER = '5491134502319';
 - Open Graph + Twitter Card con `og-image.jpg`.
 - **JSON-LD `AutoBodyShop`**: dirección, teléfono, horarios, zonas de cobertura y catálogo
   de servicios.
-- **JSON-LD `FAQPage`**: las 7 preguntas frecuentes, elegibles para rich results.
+- **JSON-LD `FAQPage`**: las 4 preguntas frecuentes, elegibles para rich results.
   Si se edita una pregunta en el HTML hay que editarla también en el JSON-LD.
+  Es el motivo por el que la sección de preguntas sobrevivió al recorte: cerrada ocupa
+  muy poco y es lo único que puede darle a Google un resultado enriquecido.
 - `robots.txt` + `sitemap.xml`.
 
 Después de publicar: dar de alta el sitio en **Google Search Console** y enlazarlo desde la
@@ -133,7 +133,7 @@ locales tipo "chapa y pintura Castelar").
 
 ## Rendimiento y accesibilidad
 
-- Imágenes en **WebP**, con `loading="lazy"` en todo lo que está bajo el fold (19 de 24).
+- Imágenes en **WebP**, con `loading="lazy"` en todo lo que está bajo el fold.
 - Hero precargado con `<link rel="preload">` + `srcset` (versión de 900px para celular).
 - Fuentes self-hosted con `preload` y `font-display: swap`.
 - **Sin CLS**: todas las imágenes tienen `width`/`height` o un contenedor con `aspect-ratio`.
