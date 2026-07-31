@@ -186,9 +186,15 @@ rompe (pasó con el equipamiento: el markup nuevo usa `.equip__item` y el CSS vi
 El `vercel.json` también fuerza `no-cache` en CSS y JS como segunda red de seguridad, pero
 el `?v=` es lo que evita hasta la petición de revalidación.
 
-### Cache de las fotos
+### Qué hace cada regla del `vercel.json`
 
-Las imágenes **no** están como `immutable` a propósito: el procedimiento de
-`REEMPLAZAR-FOTOS.md` es pisar los archivos con el mismo nombre, y con `immutable` los
-visitantes que ya entraron seguirían viendo las fotos viejas durante un año. Están en una
-hora de frescura con revalidación en segundo plano.
+`vercel.json` no admite comentarios ni propiedades extra dentro de `headers` — agregarle una
+clave `"comment"` hace que el deploy **falle en la validación** y Vercel se quede sirviendo la
+versión anterior. Por eso la explicación va acá:
+
+| Ruta | Cache-Control | Por qué |
+|---|---|---|
+| `/assets/fonts/*` | `max-age=31536000, immutable` | Las fuentes nunca cambian con el mismo nombre. |
+| `/assets/img/*` | `max-age=3600, stale-while-revalidate=86400` | **No pueden ser `immutable`**: el procedimiento de `REEMPLAZAR-FOTOS.md` es pisar los archivos con el mismo nombre, y con `immutable` los visitantes que ya entraron verían las fotos viejas durante un año. |
+| `/assets/css/*`, `/assets/js/*` | `no-cache` | El HTML y el CSS tienen que viajar juntos. Revalidan siempre; el 304 pesa casi nada. |
+| `/*` | — | Sólo headers de seguridad. **No agregarle `Cache-Control`**: sobreescribiría a los de arriba. |
