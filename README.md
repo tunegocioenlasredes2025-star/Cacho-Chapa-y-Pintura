@@ -156,12 +156,12 @@ python -m http.server 4370 --directory "C:/TNR/Cacho/sitio"
 
 ## Deploy en Vercel
 
-El proyecto es estático, no hay build step.
+El proyecto es estático, no hay build step. El repositorio git está inicializado en esta
+misma carpeta, así que `index.html` queda en la raíz del repo.
 
 1. Importar el repo en Vercel.
 2. Framework Preset: **Other**.
-3. Build Command: vacío. Output Directory: **`sitio`** (o mover el contenido de `sitio/`
-   a la raíz del repo y dejarlo en blanco).
+3. Build Command: vacío. Output Directory: vacío (raíz).
 4. Deploy.
 5. Conectar el dominio y hacer el reemplazo del punto 3 de *Pendientes*.
 
