@@ -1,0 +1,14 @@
+{
+  "name": "Taller Cacho — Chapa y Pintura",
+  "short_name": "Taller Cacho",
+  "description": "Taller de chapa y pintura en Castelar. Reparación de siniestros y trabajos para compañías de seguros.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16181b",
+  "theme_color": "#16181b",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

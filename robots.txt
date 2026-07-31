@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: reemplazar por el dominio definitivo
+Sitemap: https://tallercacho.com.ar/sitemap.xml
