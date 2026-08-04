@@ -42,8 +42,8 @@ sitio/
         └── trabajos/                  Galería: 4 fotos, thumb 800×600 + versión -full
 ```
 
-**Los 7 bloques:** portada · el taller + equipamiento · servicios · compañías de seguros ·
-trabajos realizados · preguntas frecuentes · contacto + mapa.
+**Los 8 bloques:** portada · el taller + equipamiento · servicios · compañías de seguros ·
+el taller por dentro · compra y venta · preguntas frecuentes · contacto + mapa.
 
 ---
 

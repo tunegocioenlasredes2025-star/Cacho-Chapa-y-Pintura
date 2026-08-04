@@ -705,6 +705,28 @@
 .lightbox__next { right: clamp(0.5rem, 3vw, 2rem); top: 50%; transform: translateY(-50%); }
 
 /* --------------------------------------------------------------------------
+   COMPRA Y VENTA
+   Banda de cierre suave: comparte la estética pero no compite con la de
+   seguros, que es la que tiene que pesar.
+   -------------------------------------------------------------------------- */
+.handoff {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.handoff__grid { display: grid; gap: clamp(1.1rem, 3vw, 3rem); }
+@media (min-width: 900px) {
+  .handoff__grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); align-items: start; }
+}
+.handoff h2 { max-width: 14ch; }
+.handoff__body p {
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+.handoff__body .btn-row { margin-top: 1.5rem; }
+
+/* --------------------------------------------------------------------------
    FAQ
    -------------------------------------------------------------------------- */
 .faq__grid { display: grid; gap: clamp(1.5rem, 3.5vw, 3.5rem); }

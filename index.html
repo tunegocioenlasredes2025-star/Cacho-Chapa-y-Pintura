@@ -8,7 +8,7 @@
      SEO
      ========================================================================== -->
 <title>Chapa y Pintura en Castelar | Taller Cacho — Siniestros y Seguros</title>
-<meta name="description" content="Taller de chapa y pintura en Castelar. Reparación de siniestros, pintura en cabina y medición láser. Trabajamos con compañías de seguros. Zona oeste.">
+<meta name="description" content="Taller de chapa y pintura en Castelar. Reparación de siniestros, granizo y sacabollos sin pintar. Trabajamos con compañías de seguros. Zona oeste.">
 <meta name="author" content="Taller Cacho">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#16181b">
@@ -21,7 +21,7 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Taller Cacho">
 <meta property="og:title" content="Taller Cacho | Chapa y Pintura en Castelar">
-<meta property="og:description" content="Reparación de siniestros, chapa y pintura con equipamiento profesional. Trabajamos con compañías de seguros y con particulares. Castelar, zona oeste.">
+<meta property="og:description" content="Reparación de siniestros, granizo y sacabollos sin pintar. Chapa y pintura con equipamiento profesional. Trabajamos con compañías de seguros. Castelar, zona oeste.">
 <meta property="og:url" content="https://tallercacho.com.ar/">
 <meta property="og:image" content="https://tallercacho.com.ar/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -44,8 +44,8 @@
 <link rel="preload" href="assets/img/hero.webp" as="image" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1800w" imagesizes="100vw" fetchpriority="high">
 <!-- El ?v= fuerza al navegador a bajar el CSS/JS nuevo cuando cambia el HTML.
      SUBIR ESTE NUMERO CADA VEZ QUE SE EDITE UN .css O UN .js. -->
-<link rel="stylesheet" href="assets/css/base.css?v=2">
-<link rel="stylesheet" href="assets/css/site.css?v=2">
+<link rel="stylesheet" href="assets/css/base.css?v=3">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 
 <!-- ==========================================================================
      Datos estructurados
@@ -102,6 +102,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chapa y enderezado de carrocería" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura automotor en cabina" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparación de siniestros" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sacabollos sin pintar (reparación de granizo)" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trabajos para compañías de seguros" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pulido y corrección de pintura" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restauración de vehículos" } },
@@ -124,6 +125,11 @@
       "@type": "Question",
       "name": "¿El presupuesto tiene costo?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Podés acercar el vehículo al taller o mandarnos fotos por WhatsApp para una estimación inicial. El presupuesto cerrado lo damos después de revisar el vehículo, porque hay daños que recién se ven al desarmar." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sacan los bollos de granizo sin pintar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tenemos sacabollos en el taller: cuando la pintura no está cortada, el bollo se trabaja desde atrás del panel y la chapa vuelve a su forma sin lijar ni repintar. Se conserva la pintura original de fábrica y el trabajo suele salir más rápido y más barato que una reparación con pintura. Si el granizo cortó la pintura, ahí sí hace falta chapa y pintura." }
     },
     {
       "@type": "Question",
@@ -436,6 +442,9 @@
           <b>Reparación de siniestros</b><span>Choques, granizo y daño estructural.</span>
         </li>
         <li class="svc__item" data-reveal>
+          <b>Sacabollos sin pintar</b><span>Bollos de granizo sin tocar la pintura original.</span>
+        </li>
+        <li class="svc__item" data-reveal>
           <b>Trabajos para seguros</b><span>Peritaje, documentación y gestión.</span>
         </li>
         <li class="svc__item" data-reveal>
@@ -540,6 +549,36 @@
 </section>
 
 <!-- ==========================================================================
+     COMPRA Y VENTA
+     ==========================================================================
+     Idea de Adrián: al cliente que ya confió en el taller para reparar,
+     recordarle que también pueden darle una mano cuando quiera vender o
+     cambiar el vehículo. Va como banda corta, sin competir con la de seguros.
+     ========================================================================== -->
+<section class="section section--tight handoff" id="compraventa">
+  <div class="container">
+    <div class="handoff__grid">
+      <div>
+        <p class="eyebrow" data-reveal>Compra y venta</p>
+        <h2 data-reveal style="--reveal-delay:60ms">¿Vas a vender o cambiar el auto?</h2>
+      </div>
+      <div class="handoff__body">
+        <p data-reveal style="--reveal-delay:120ms">
+          Si confiaste en nosotros para repararlo, no te olvides de nosotros cuando quieras
+          venderlo o cambiarlo. Por el taller pasan consultas todos los días y podemos
+          acercarte oportunidades.
+        </p>
+        <div class="btn-row" data-reveal style="--reveal-delay:180ms">
+          <a class="btn btn--ghost" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20la%20compra%20o%20venta%20de%20un%20veh%C3%ADculo." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Consultar por compra o venta
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
      PREGUNTAS FRECUENTES (acordeón compacto, cerrado por defecto)
      ========================================================================== -->
 <section class="section section--tight" id="faq">
@@ -559,6 +598,11 @@
         <div class="faq__item" data-reveal>
           <h3><button class="faq__q" type="button" aria-expanded="false">¿El presupuesto tiene costo?<span class="faq__icon" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div><p>No. Podés acercar el vehículo al taller o mandarnos fotos por WhatsApp para una estimación inicial. El presupuesto cerrado lo damos después de revisar el vehículo, porque hay daños que recién se ven al desarmar.</p></div></div>
+        </div>
+
+        <div class="faq__item" data-reveal>
+          <h3><button class="faq__q" type="button" aria-expanded="false">¿Sacan los bollos de granizo sin pintar?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Sí. Tenemos sacabollos en el taller: cuando la pintura no está cortada, el bollo se trabaja desde atrás del panel y la chapa vuelve a su forma sin lijar ni repintar. Se conserva la pintura original de fábrica, que es lo que mejor sostiene el valor del vehículo, y el trabajo suele salir más rápido y más barato que una reparación con pintura.</p><p>Si el granizo cortó la pintura o el bollo quedó muy marcado, ahí sí hace falta chapa y pintura. Eso lo definimos cuando vemos el vehículo.</p></div></div>
         </div>
 
         <div class="faq__item" data-reveal>
@@ -691,6 +735,6 @@
   </div>
 </div>
 
-<script src="assets/js/site.js?v=2" defer></script>
+<script src="assets/js/site.js?v=3" defer></script>
 </body>
 </html>
