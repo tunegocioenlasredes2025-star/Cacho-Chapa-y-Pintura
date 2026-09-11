@@ -39,11 +39,13 @@ sitio/
         ├── hero.webp / hero-sm.webp   Portada (1800 px / 900 px)
         ├── taller.webp                Bloque "El taller"
         ├── seguros.webp               Fondo de la banda de seguros (va en B/N y oscurecida)
-        └── trabajos/                  Galería: 4 fotos, thumb 800×600 + versión -full
+        ├── sacabollos/                Sección sacabollos: 3 fotos 3:4 (patentes pixeladas)
+        └── trabajos/                  Galería: 4 de cabina (3:4) + 2 de laboratorio (3:2),
+                                       cada una con su versión -full
 ```
 
-**Los 8 bloques:** portada · el taller + equipamiento · servicios · compañías de seguros ·
-el taller por dentro · compra y venta · preguntas frecuentes · contacto + mapa.
+**Los 9 bloques:** portada · el taller + equipamiento · servicios · compañías de seguros ·
+sacabollos · el taller por dentro · venta de tu auto · preguntas frecuentes · contacto + mapa.
 
 ---
 
@@ -72,11 +74,10 @@ haya salto de layout mientras cargan.
 ## ⚠️ Pendientes antes de publicar
 
 ### 1. Fotos
-Las 5 fotos del sitio son **reales, del taller** (cabina de pintura y laboratorio de
-colores). No hay ninguna de un vehículo terminado, por eso la sección se llama
-"El taller por dentro" y no "Trabajos realizados". Cuando el cliente mande fotos de
-unidades entregadas conviene sumarlas: es lo que más convence a un particular.
-Ver `REEMPLAZAR-FOTOS.md` para el procedimiento.
+Todas las fotos son **reales, del taller**: el Audi A1 recién pintado en cabina, el
+laboratorio de colores y el sector de sacabollos (tanda del 11/09/2026). Todavía no hay
+fotos de antes y después de un mismo auto; cuando lleguen conviene sumarlas a la galería,
+es lo que más convence a un particular. Ver `REEMPLAZAR-FOTOS.md` para el procedimiento.
 
 ### 2. Datos a confirmar con el cliente
 
@@ -149,7 +150,7 @@ locales tipo "chapa y pintura Castelar").
 Cualquier servidor estático sirve:
 
 ```bash
-python -m http.server 4370 --directory "C:/TNR/Cacho/sitio"
+python -m http.server 4370   # desde la raíz del repo
 ```
 
 ---

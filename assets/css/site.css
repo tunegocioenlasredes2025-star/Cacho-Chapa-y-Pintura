@@ -582,9 +582,10 @@
 /* --------------------------------------------------------------------------
    GALERÍA
    -------------------------------------------------------------------------- */
-/* Las fotos del taller son 16:9. En grilla de 2 columnas dentro de un celular
-   quedarían en miniaturas de 164 px: ilegibles. Por eso en celular van en un
-   carrusel a sangre, que las muestra grandes y ocupa menos alto. */
+/* Las fotos de cabina son verticales (3:4) y las del laboratorio horizontales.
+   Desde 700 px van en 4 columnas: las horizontales (--wide) ocupan dos y se
+   muestran en 3:2, que da casi el mismo alto que una vertical. En celular van
+   en un carrusel a sangre, todas en 3:4: se ven grandes y ocupan menos alto. */
 .gallery__grid {
   display: flex;
   gap: 0.6rem;
@@ -597,24 +598,25 @@
   padding-inline: var(--gutter);
 }
 .gallery__grid::-webkit-scrollbar { display: none; }
-.gallery__grid > * { flex: 0 0 78%; scroll-snap-align: center; }
+.gallery__grid > * { flex: 0 0 66%; scroll-snap-align: center; }
 
 @media (min-width: 700px) {
   .gallery__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: clamp(0.6rem, 1.4vw, 0.9rem);
     overflow: visible;
     margin-inline: 0;
     padding-inline: 0;
   }
   .gallery__grid > * { flex: initial; }
+  .gallery__grid > .gallery__item--wide { grid-column: span 2; aspect-ratio: 3 / 2; }
 }
 
 .gallery__item {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--g-100);
@@ -703,6 +705,67 @@
 .lightbox__close { top: clamp(1rem, 3vw, 2rem); right: clamp(1rem, 3vw, 2rem); }
 .lightbox__prev { left: clamp(0.5rem, 3vw, 2rem); top: 50%; transform: translateY(-50%); }
 .lightbox__next { right: clamp(0.5rem, 3vw, 2rem); top: 50%; transform: translateY(-50%); }
+
+/* --------------------------------------------------------------------------
+   SACABOLLOS
+   Las fotos son verticales (3:4). En desktop van una grande y dos apiladas
+   al costado; en celular la grande arriba y las otras dos debajo.
+   -------------------------------------------------------------------------- */
+.pdr__grid { display: grid; gap: clamp(2rem, 4.5vw, 3.5rem); }
+@media (min-width: 900px) {
+  .pdr__grid { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); align-items: center; }
+}
+
+.pdr__body > * + * { margin-top: 1.1rem; }
+.pdr h2 { max-width: 15ch; }
+.pdr__lead {
+  font-size: var(--fs-lead);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 50ch;
+}
+
+.pdr__list { border-top: 1px solid var(--line); }
+.pdr__body > .pdr__list { margin-top: 1.6rem; }
+.pdr__list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.pdr__list svg { width: 20px; height: 20px; color: var(--ink-soft); margin-top: 2px; }
+.pdr__list b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9688rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.15rem;
+}
+.pdr__list span {
+  display: block;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.pdr__body > .btn-row { margin-top: 1.75rem; }
+
+.pdr__media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.2vw, 0.8rem);
+}
+.pdr__media .gallery__item { aspect-ratio: 3 / 4; }
+.pdr__media .pdr__main { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
+/* Absoluta: así la foto grande no empuja el alto de las filas y la grilla
+   lo toma de las dos chicas. */
+.pdr__main img { position: absolute; inset: 0; }
+
+@media (min-width: 620px) {
+  .pdr__media { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+  .pdr__media .pdr__main { grid-column: 1; grid-row: 1 / span 2; aspect-ratio: auto; }
+}
 
 /* --------------------------------------------------------------------------
    COMPRA Y VENTA

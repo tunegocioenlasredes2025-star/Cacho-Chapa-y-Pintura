@@ -243,7 +243,9 @@
   var lightbox = $('#lightbox');
   var lbImg = $('#lbImg');
   var lbCap = $('#lbCap');
-  var items = $$('#gallery .gallery__item');
+  /* Cada contenedor [data-lightbox] es un grupo: las flechas recorren sólo
+     las fotos de ese bloque (sacabollos por un lado, cabina por el otro). */
+  var items = [];
   var current = 0;
   var lastFocused = null;
 
@@ -273,10 +275,14 @@
     if (lastFocused) lastFocused.focus();
   }
 
-  items.forEach(function (item, i) {
-    item.addEventListener('click', function (e) {
-      e.preventDefault();
-      openLightbox(i);
+  $$('[data-lightbox]').forEach(function (group) {
+    var list = $$('.gallery__item', group);
+    list.forEach(function (item, i) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        items = list;
+        openLightbox(i);
+      });
     });
   });
 

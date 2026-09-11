@@ -41,11 +41,11 @@
      ========================================================================== -->
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/hero.webp" as="image" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="assets/img/hero.webp" as="image" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
 <!-- El ?v= fuerza al navegador a bajar el CSS/JS nuevo cuando cambia el HTML.
      SUBIR ESTE NUMERO CADA VEZ QUE SE EDITE UN .css O UN .js. -->
-<link rel="stylesheet" href="assets/css/base.css?v=3">
-<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/base.css?v=4">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
 
 <!-- ==========================================================================
      Datos estructurados
@@ -106,7 +106,8 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trabajos para compañías de seguros" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pulido y corrección de pintura" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restauración de vehículos" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparaciones integrales" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparaciones integrales" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Venta de vehículos de clientes" } }
     ]
   }
 }
@@ -275,6 +276,7 @@
       <a href="#taller">El taller</a>
       <a href="#servicios">Servicios</a>
       <a href="#seguros">Seguros</a>
+      <a href="#sacabollos">Sacabollos</a>
       <a href="#trabajos">Trabajos</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -294,8 +296,9 @@
     <a href="#taller"><i>01</i> El taller</a>
     <a href="#servicios"><i>02</i> Servicios</a>
     <a href="#seguros"><i>03</i> Seguros</a>
-    <a href="#trabajos"><i>04</i> Trabajos</a>
-    <a href="#contacto"><i>05</i> Contacto</a>
+    <a href="#sacabollos"><i>04</i> Sacabollos</a>
+    <a href="#trabajos"><i>05</i> Trabajos</a>
+    <a href="#contacto"><i>06</i> Contacto</a>
   </nav>
   <div class="menu__foot">
     <div class="btn-row">
@@ -320,10 +323,10 @@
 <section class="hero" id="inicio">
   <div class="hero__media" id="heroMedia">
     <img src="assets/img/hero.webp"
-         srcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1800w"
+         srcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1600w"
          sizes="100vw"
-         alt="Vehículo enmascarado dentro de la cabina de pintura del Taller Cacho"
-         width="1600" height="720" fetchpriority="high" decoding="async">
+         alt="Audi A1 recién pintado dentro de la cabina de pintura del Taller Cacho"
+         width="1600" height="1000" fetchpriority="high" decoding="async">
   </div>
 
   <div class="hero__inner">
@@ -512,13 +515,71 @@
 </section>
 
 <!-- ==========================================================================
+     SACABOLLOS
+     ==========================================================================
+     Fotos reales del sector de sacabollos que mandó Adrián (11/09/2026).
+     Son autos de clientes: las patentes van pixeladas en el archivo.
+     ========================================================================== -->
+<section class="section pdr" id="sacabollos">
+  <div class="container">
+    <div class="pdr__grid">
+
+      <div class="pdr__body">
+        <p class="eyebrow" data-reveal>Sacabollos sin pintar</p>
+        <h2 data-reveal style="--reveal-delay:60ms">El bollo sale. La pintura de fábrica queda.</h2>
+        <p class="pdr__lead" data-reveal style="--reveal-delay:120ms">
+          Tenemos un sector del taller dedicado al sacabollos. Cuando la pintura no está
+          cortada, el bollo se trabaja desde atrás del panel y la chapa vuelve a su forma
+          sin lijar ni repintar.
+        </p>
+        <ul class="pdr__list" data-reveal style="--reveal-delay:180ms">
+          <li>
+            <svg aria-hidden="true"><use href="#ic-check"></use></svg>
+            <div><b>Se conserva la pintura original</b><span>La de fábrica es la que mejor sostiene el valor del auto.</span></div>
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="#ic-check"></use></svg>
+            <div><b>Más rápido y más barato</b><span>Sin masilla, sin fondo y sin cabina: menos días de taller.</span></div>
+          </li>
+          <li>
+            <svg aria-hidden="true"><use href="#ic-check"></use></svg>
+            <div><b>Luz para leer la chapa</b><span>La iluminación en panal marca cada bollo en el reflejo y deja ver cuándo el panel quedó derecho.</span></div>
+          </li>
+        </ul>
+        <div class="btn-row" data-reveal style="--reveal-delay:240ms">
+          <a class="btn btn--wa" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20sacabollos.%20Les%20mando%20fotos%20del%20bollo." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Mandanos fotos del bollo
+          </a>
+        </div>
+      </div>
+
+      <div class="pdr__media" data-lightbox>
+        <a class="gallery__item pdr__main" href="assets/img/sacabollos/sacabollos-01-full.webp" data-cap="Sector de sacabollos" data-reveal="scale">
+          <img src="assets/img/sacabollos/sacabollos-01.webp" width="900" height="1200" alt="Honda Civic en el sector de sacabollos del taller, bajo la iluminación en panal" loading="lazy" decoding="async">
+          <span class="gallery__cap">Sector de sacabollos</span>
+        </a>
+        <a class="gallery__item" href="assets/img/sacabollos/sacabollos-02-full.webp" data-cap="Renault Kangoo Stepway" data-reveal="scale" style="--reveal-delay:80ms">
+          <img src="assets/img/sacabollos/sacabollos-02.webp" width="600" height="800" alt="Renault Kangoo Stepway roja con el reflejo de las luces de lectura sobre el capot" loading="lazy" decoding="async">
+          <span class="gallery__cap">Renault Kangoo</span>
+        </a>
+        <a class="gallery__item" href="assets/img/sacabollos/sacabollos-03-full.webp" data-cap="Toyota Corolla Cross" data-reveal="scale" style="--reveal-delay:160ms">
+          <img src="assets/img/sacabollos/sacabollos-03.webp" width="600" height="800" alt="Toyota Corolla Cross gris en el sector de sacabollos, vista trasera" loading="lazy" decoding="async">
+          <span class="gallery__cap">Corolla Cross</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
      EL TALLER POR DENTRO
      ==========================================================================
-     Las 4 fotos son reales y muestran instalaciones y proceso (cabina de
-     pintura y laboratorio de colores), no vehículos terminados. Por eso el
-     título habla del taller y no de "trabajos realizados".
-     Cuando el cliente mande fotos de unidades entregadas, se pueden sumar
-     bloques <a class="gallery__item"> con el par trabajo-0X + trabajo-0X-full.
+     Cabina: Audi A1 recién pintado (las fotos que mandó Adrián el
+     11/09/2026, verticales 3:4). Laboratorio: las dos fotos de antes,
+     recortadas a 3:2 para ocupar dos columnas a la misma altura.
+     Para sumar una foto vertical: otro <a class="gallery__item">.
+     Para una horizontal: el mismo bloque con la clase gallery__item--wide.
      ========================================================================== -->
 <section class="section section--soft section--tight" id="trabajos">
   <div class="container">
@@ -527,21 +588,29 @@
       <h2 data-reveal style="--reveal-delay:60ms">Cabina de pintura y laboratorio de colores.</h2>
     </div>
 
-    <div class="gallery__grid" id="gallery">
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-01-full.webp" data-cap="Vehículo enmascarado en cabina" data-reveal="scale">
-        <img src="assets/img/trabajos/trabajo-01.webp" width="800" height="450" alt="Vehículo enmascarado dentro de la cabina de pintura del taller" loading="lazy" decoding="async">
-        <span class="gallery__cap">Vehículo enmascarado en cabina</span>
+    <div class="gallery__grid" id="gallery" data-lightbox>
+      <a class="gallery__item" href="assets/img/trabajos/cabina-01-full.webp" data-cap="Audi A1 — lateral recién pintado" data-reveal="scale">
+        <img src="assets/img/trabajos/cabina-01.webp" width="600" height="800" alt="Audi A1 recién pintado dentro de la cabina, con vidrios y ruedas enmascarados" loading="lazy" decoding="async">
+        <span class="gallery__cap">Lateral recién pintado</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-02-full.webp" data-cap="Preparación previa al pintado" data-reveal="scale" style="--reveal-delay:60ms">
-        <img src="assets/img/trabajos/trabajo-02.webp" width="800" height="450" alt="Vehículo preparado y enmascarado antes de aplicar el color" loading="lazy" decoding="async">
-        <span class="gallery__cap">Preparación previa al pintado</span>
+      <a class="gallery__item" href="assets/img/trabajos/cabina-02-full.webp" data-cap="Audi A1 — brillo del lateral trasero" data-reveal="scale" style="--reveal-delay:60ms">
+        <img src="assets/img/trabajos/cabina-02.webp" width="600" height="800" alt="Reflejo de las luces de la cabina sobre el lateral trasero recién pintado" loading="lazy" decoding="async">
+        <span class="gallery__cap">Brillo de terminación</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-03-full.webp" data-cap="Laboratorio de colores" data-reveal="scale" style="--reveal-delay:120ms">
-        <img src="assets/img/trabajos/trabajo-03.webp" width="800" height="450" alt="Laboratorio de colores del taller con el sistema de mezcla de pinturas" loading="lazy" decoding="async">
+      <a class="gallery__item" href="assets/img/trabajos/cabina-03-full.webp" data-cap="Paragolpes pintados por separado" data-reveal="scale" style="--reveal-delay:120ms">
+        <img src="assets/img/trabajos/cabina-03.webp" width="600" height="800" alt="Paragolpes delantero y trasero pintados sobre los caballetes de la cabina" loading="lazy" decoding="async">
+        <span class="gallery__cap">Paragolpes por separado</span>
+      </a>
+      <a class="gallery__item" href="assets/img/trabajos/cabina-04-full.webp" data-cap="Audi A1 — paragolpes trasero en cabina" data-reveal="scale" style="--reveal-delay:180ms">
+        <img src="assets/img/trabajos/cabina-04.webp" width="600" height="800" alt="Paragolpes trasero del Audi A1 recién pintado, con el resto del auto enmascarado" loading="lazy" decoding="async">
+        <span class="gallery__cap">Paragolpes trasero</span>
+      </a>
+      <a class="gallery__item gallery__item--wide" href="assets/img/trabajos/laboratorio-01-full.webp" data-cap="Laboratorio de colores" data-reveal="scale">
+        <img src="assets/img/trabajos/laboratorio-01.webp" width="900" height="600" alt="Laboratorio de colores del taller con el sistema de mezcla de pinturas" loading="lazy" decoding="async">
         <span class="gallery__cap">Laboratorio de colores</span>
       </a>
-      <a class="gallery__item" href="assets/img/trabajos/trabajo-04-full.webp" data-cap="Carta de colores" data-reveal="scale" style="--reveal-delay:180ms">
-        <img src="assets/img/trabajos/trabajo-04.webp" width="800" height="450" alt="Carta de colores y muestrarios para igualar el color de fábrica" loading="lazy" decoding="async">
+      <a class="gallery__item gallery__item--wide" href="assets/img/trabajos/laboratorio-02-full.webp" data-cap="Carta de colores" data-reveal="scale" style="--reveal-delay:60ms">
+        <img src="assets/img/trabajos/laboratorio-02.webp" width="900" height="600" alt="Carta de colores y muestrarios para igualar el color de fábrica" loading="lazy" decoding="async">
         <span class="gallery__cap">Carta de colores</span>
       </a>
     </div>
@@ -551,26 +620,27 @@
 <!-- ==========================================================================
      COMPRA Y VENTA
      ==========================================================================
-     Idea de Adrián: al cliente que ya confió en el taller para reparar,
-     recordarle que también pueden darle una mano cuando quiera vender o
-     cambiar el vehículo. Va como banda corta, sin competir con la de seguros.
+     Pedido de Adrián (audio del 11/09/2026): el taller también se dedica a
+     vender los autos de sus clientes. El mensaje es suyo: "ya que confiaste
+     en nosotros para la reparación, confiá para la venta; tu auto le puede
+     servir a otro cliente". Va como banda corta, sin competir con seguros.
      ========================================================================== -->
 <section class="section section--tight handoff" id="compraventa">
   <div class="container">
     <div class="handoff__grid">
       <div>
-        <p class="eyebrow" data-reveal>Compra y venta</p>
-        <h2 data-reveal style="--reveal-delay:60ms">¿Vas a vender o cambiar el auto?</h2>
+        <p class="eyebrow" data-reveal>Venta de tu auto</p>
+        <h2 data-reveal style="--reveal-delay:60ms">Confiaste para repararlo. Confiá para venderlo.</h2>
       </div>
       <div class="handoff__body">
         <p data-reveal style="--reveal-delay:120ms">
-          Si confiaste en nosotros para repararlo, no te olvides de nosotros cuando quieras
-          venderlo o cambiarlo. Por el taller pasan consultas todos los días y podemos
-          acercarte oportunidades.
+          Además de reparar, nos dedicamos a la venta de los autos de nuestros clientes.
+          Por el taller pasa gente todos los días y tu auto le puede servir a otro cliente.
+          Contanos qué tenés y lo vemos juntos.
         </p>
         <div class="btn-row" data-reveal style="--reveal-delay:180ms">
-          <a class="btn btn--ghost" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20la%20compra%20o%20venta%20de%20un%20veh%C3%ADculo." target="_blank" rel="noopener">
-            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Consultar por compra o venta
+          <a class="btn btn--ghost" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20la%20venta%20de%20mi%20auto." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Quiero vender mi auto
           </a>
         </div>
       </div>
@@ -737,6 +807,6 @@
   </div>
 </div>
 
-<script src="assets/js/site.js?v=3" defer></script>
+<script src="assets/js/site.js?v=4" defer></script>
 </body>
 </html>
