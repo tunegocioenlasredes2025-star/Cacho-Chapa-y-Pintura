@@ -74,10 +74,13 @@ def exportar(im, destino, ancho, alto, q=82, fx=0.5, fy=0.5):
     print(f"  {os.path.relpath(destino, IMG):34} {ancho}x{alto}  {kb:6.0f} KB")
 
 
-print("Portada (Audi A1 en cabina, 16:10):")
+print("Portada (Audi A1 en cabina):")
 hero = realzar(original("17.24.24"))
+# La tarjeta de la portada usa la foto entera, vertical.
+exportar(hero, os.path.join(IMG, "hero-cabina.webp"), 960, 1280, q=80)
+exportar(hero, os.path.join(IMG, "hero-cabina-sm.webp"), 600, 800, q=78)
+# Recorte horizontal: sólo para el fondo de la banda de seguros y og-image.jpg.
 exportar(hero, os.path.join(IMG, "hero.webp"), 1600, 1000, q=76, fy=0.57)
-exportar(hero, os.path.join(IMG, "hero-sm.webp"), 900, 563, q=80, fy=0.57)
 
 print("Galeria cabina (miniatura 3:4 + version grande):")
 for nombre, n in [

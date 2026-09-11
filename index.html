@@ -41,11 +41,11 @@
      ========================================================================== -->
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/instrument-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/hero.webp" as="image" imagesrcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="assets/img/hero-cabina.webp" as="image" imagesrcset="assets/img/hero-cabina-sm.webp 600w, assets/img/hero-cabina.webp 960w" imagesizes="(min-width: 900px) 40vw, 92vw" fetchpriority="high">
 <!-- El ?v= fuerza al navegador a bajar el CSS/JS nuevo cuando cambia el HTML.
      SUBIR ESTE NUMERO CADA VEZ QUE SE EDITE UN .css O UN .js. -->
-<link rel="stylesheet" href="assets/css/base.css?v=4">
-<link rel="stylesheet" href="assets/css/site.css?v=4">
+<link rel="stylesheet" href="assets/css/base.css?v=5">
+<link rel="stylesheet" href="assets/css/site.css?v=5">
 
 <!-- ==========================================================================
      Datos estructurados
@@ -321,43 +321,56 @@
      HERO
      ========================================================================== -->
 <section class="hero" id="inicio">
-  <div class="hero__media" id="heroMedia">
-    <img src="assets/img/hero.webp"
-         srcset="assets/img/hero-sm.webp 900w, assets/img/hero.webp 1600w"
-         sizes="100vw"
-         alt="Audi A1 recién pintado dentro de la cabina de pintura del Taller Cacho"
-         width="1600" height="1000" fetchpriority="high" decoding="async">
+  <!-- Luz ambiente: la misma foto, desenfocada y oscurecida -->
+  <div class="hero__ambient" id="heroMedia" aria-hidden="true">
+    <img src="assets/img/hero-cabina-sm.webp" alt="" width="600" height="800" decoding="async">
   </div>
 
   <div class="hero__inner">
-    <div class="hero__logo" data-reveal="fade">
-      <img src="assets/brand/logo-cacho-blanco.png" alt="Taller Cacho" width="520" height="198" fetchpriority="high">
+    <div class="hero__grid">
+
+      <div class="hero__copy">
+        <p class="eyebrow" data-reveal>Chapa y pintura · Castelar</p>
+
+        <h1 data-reveal style="--reveal-delay:80ms">Tu vehículo vuelve a su <em>estado original</em>.</h1>
+
+        <p class="hero__sub" data-reveal style="--reveal-delay:160ms">
+          Chapa, pintura y reparación de siniestros en Castelar. Trabajamos con compañías
+          de seguros, con empresas y con particulares.
+        </p>
+
+        <div class="btn-row" data-reveal style="--reveal-delay:240ms">
+          <a class="btn btn--wa" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20una%20reparaci%C3%B3n%20en%20el%20taller." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Escribinos por WhatsApp
+          </a>
+          <a class="btn btn--outline-light" href="https://www.google.com/maps/search/?api=1&amp;query=Diego%20Araoz%203339%2C%20Castelar%2C%20Buenos%20Aires" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#ic-pin"></use></svg> Ver ubicación
+          </a>
+        </div>
+
+        <ul class="hero__specs" data-reveal style="--reveal-delay:320ms">
+          <li class="hero__spec"><b>Cabina de pintura</b><span>Aplicación y secado controlados</span></li>
+          <li class="hero__spec"><b>Medición láser</b><span>Geometría verificada</span></li>
+          <li class="hero__spec"><b>Bancada de estiramiento</b><span>Estructura a medida de fábrica</span></li>
+          <li class="hero__spec"><b>Laboratorio de colores</b><span>Color según código del vehículo</span></li>
+        </ul>
+      </div>
+
+      <!-- Sin data-reveal: es la imagen principal (LCP) y tiene que pintarse ya -->
+      <figure class="hero__photo">
+        <img src="assets/img/hero-cabina.webp"
+             srcset="assets/img/hero-cabina-sm.webp 600w, assets/img/hero-cabina.webp 960w"
+             sizes="(min-width: 900px) 40vw, 92vw"
+             alt="Audi A1 recién pintado dentro de la cabina de pintura del Taller Cacho"
+             width="960" height="1280" fetchpriority="high" decoding="async">
+        <figcaption class="hero__tag">
+          <i class="hero__dot" aria-hidden="true"></i>
+          <b>Recién pintado</b>
+          <span>Audi A1 · cabina del taller</span>
+        </figcaption>
+      </figure>
+
     </div>
-
-    <p class="eyebrow" data-reveal style="--reveal-delay:60ms">Chapa y pintura · Castelar</p>
-
-    <h1 data-reveal style="--reveal-delay:120ms">Tu vehículo vuelve a su <em>estado original</em>.</h1>
-
-    <p class="hero__sub" data-reveal style="--reveal-delay:200ms">
-      Chapa, pintura y reparación de siniestros en Castelar. Trabajamos con compañías
-      de seguros, con empresas y con particulares.
-    </p>
-
-    <div class="btn-row" data-reveal style="--reveal-delay:280ms">
-      <a class="btn btn--wa" href="https://wa.me/5491134502319?text=Hola%2C%20quer%C3%ADa%20consultar%20por%20una%20reparaci%C3%B3n%20en%20el%20taller." target="_blank" rel="noopener">
-        <svg aria-hidden="true"><use href="#ic-wa"></use></svg> Escribinos por WhatsApp
-      </a>
-      <a class="btn btn--outline-light" href="https://www.google.com/maps/search/?api=1&amp;query=Diego%20Araoz%203339%2C%20Castelar%2C%20Buenos%20Aires" target="_blank" rel="noopener">
-        <svg aria-hidden="true"><use href="#ic-pin"></use></svg> Ver ubicación
-      </a>
-    </div>
-
-    <ul class="hero__specs" data-reveal style="--reveal-delay:360ms">
-      <li class="hero__spec"><b>Cabina de pintura</b><span>Aplicación y secado controlados</span></li>
-      <li class="hero__spec"><b>Medición láser</b><span>Geometría verificada</span></li>
-      <li class="hero__spec"><b>Bancada de estiramiento</b><span>Estructura a medida de fábrica</span></li>
-      <li class="hero__spec"><b>Laboratorio de colores</b><span>Color según código del vehículo</span></li>
-    </ul>
   </div>
 </section>
 
@@ -807,6 +820,6 @@
   </div>
 </div>
 
-<script src="assets/js/site.js?v=4" defer></script>
+<script src="assets/js/site.js?v=5" defer></script>
 </body>
 </html>

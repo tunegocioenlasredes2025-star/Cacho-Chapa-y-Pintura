@@ -23,16 +23,18 @@ python procesar-fotos.py
 ### Portada
 | Archivo | Medida | Qué muestra |
 |---|---|---|
-| `assets/img/hero.webp` | 1600 × 1000 | Audi A1 recién pintado en la cabina |
-| `assets/img/hero-sm.webp` | 900 × 563 | **La misma foto**, más chica (se usa en celular) |
+| `assets/img/hero-cabina.webp` | 960 × 1280 (3:4) | Audi A1 recién pintado en la cabina, foto entera |
+| `assets/img/hero-cabina-sm.webp` | 600 × 800 | **La misma foto**, más chica (celular + luz ambiente del fondo) |
+| `assets/img/hero.webp` | 1600 × 1000 | Recorte horizontal de la misma foto |
 
-> La portada lleva un degradé oscuro encima. Conviene que la foto tenga profundidad y que
-> la zona inferior izquierda no tenga detalle importante, porque ahí van el logo y el título.
-> En celular se muestra como banda 16:9 con el texto debajo.
+> La portada muestra la foto **vertical y entera** en una tarjeta al costado del texto
+> (arriba del texto en celular). Atrás va la misma foto desenfocada como luz ambiente, así
+> que no hace falta otro archivo. En desktop la tarjeta es 4:5 y en celular 5:4: conviene
+> que el auto quede centrado en la foto.
 
-El fondo de la banda de seguros **no tiene archivo propio**: reusa `hero.webp`, en blanco y
-negro y muy oscurecido. Y `og-image.jpg` (1200 × 630, la que se ve al compartir el link por
-WhatsApp) se arma con la misma foto: si cambia la portada, hay que regenerarla.
+`hero.webp` ya no se ve en la portada: es el fondo de la banda de seguros (en blanco y negro
+y muy oscurecido) y la base de `og-image.jpg` (1200 × 630, la que se ve al compartir el link
+por WhatsApp). Si cambia la portada, hay que regenerar las dos.
 
 ### El taller
 | Archivo | Medida | Qué muestra |
