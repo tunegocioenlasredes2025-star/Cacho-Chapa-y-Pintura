@@ -89,9 +89,17 @@ Si cambian los horarios hay que actualizarlos en **tres lugares**: el bloque
 `openingHoursSpecification` del JSON-LD, la fila de Contacto y el `<address>` del footer.
 
 ### 3. Dominio
-Está puesto `https://tallercacho.com.ar` como placeholder. Hay que reemplazarlo en:
-`index.html` (canonical, `og:url`, `og:image`, `twitter:image`, los dos bloques JSON-LD),
-`robots.txt` y `sitemap.xml`. Buscar y reemplazar `tallercacho.com.ar`.
+El dominio es **`chapaypinturacacho.com.ar`**, registrado por Adrián en NIC.ar el 06/10/2026
+(vence al año; si no lo renueva, se pierde). Ya está cargado en el proyecto de Vercel junto
+con el `www`, y el canónico es **`https://www.chapaypinturacacho.com.ar/`**: el dominio sin
+`www` redirige al `www` con un 308. Ese canónico ya está puesto en `index.html`
+(canonical, `og:url`, `og:image`, `twitter:image`, los dos bloques JSON-LD), `robots.txt`
+y `sitemap.xml`.
+
+Falta que Adrián **delegue** el dominio en NIC.ar (TAD → Operaciones sobre dominios →
+Delegar) a los nameservers de Vercel: `ns1.vercel-dns.com` y `ns2.vercel-dns.com`. Hasta
+que lo haga, Vercel muestra el dominio como *Invalid Configuration*, que es lo esperado.
+El SSL lo emite Vercel solo cuando el DNS resuelve.
 
 ### 4. Verificar la ubicación del mapa
 El iframe apunta a `Diego Araoz 3339, Castelar`. Conviene confirmar con el cliente que
